@@ -7,18 +7,18 @@ class PhysicsEngine:
 
     def apply_gravity(self, entity):
         """Menambahkan efek gravitasi pada entitas"""
-        if not entity.on_ground:
-            entity.velocity_y += self.gravity
-            if entity.velocity_y > self.terminal_velocity:
-                entity.velocity_y = self.terminal_velocity
+        entity.velocity_y += self.gravity
+        if entity.velocity_y > self.terminal_velocity:
+            entity.velocity_y = self.terminal_velocity
         entity.rect.y += entity.velocity_y
 
     def check_collision(self, entity, platforms):
-        """Menangani tabrakan/collision dengan platform"""
+        """Menangani tabrakan/collision dengan list platform (pygame.Rect)"""
         entity.on_ground = False
-        for platform in platforms:
-            if entity.rect.colliderect(platform.rect):
-                if entity.velocity_y > 0 and entity.rect.bottom <= platform.rect.bottom:
-                    entity.rect.bottom = platform.rect.top
+        for plat in platforms:
+            if entity.rect.colliderect(plat):
+                # Hanya mendarat jika sedang jatuh ke bawah dan posisi kaki sekitar atap platform
+                if entity.velocity_y > 0 and entity.rect.bottom <= plat.top + 30:
+                    entity.rect.bottom = plat.top
                     entity.velocity_y = 0
                     entity.on_ground = True
