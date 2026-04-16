@@ -3,6 +3,7 @@ import cv2
 import mediapipe as mp
 import math
 import random
+from entities.musuh import Musuh
 
 # --- 1. SETUP & KONFIGURASI ---
 mp_hands = mp.solutions.hands
@@ -49,6 +50,22 @@ sedang_di_tanah = True
 pos_x_sebelumnya = player_rect.x
 menghadap_kanan = True
 partikel_api = [] 
+
+# --- SISTEM PIJAKAN & MUSUH ---
+# Daftar pijakan (Lantai dasar + platform melayang)
+daftar_pijakan = [
+    pygame.Rect(0, 660, lebar, 40), # Tantai dasar
+    pygame.Rect(200, 480, 250, 20), # Platform kiri
+    pygame.Rect(600, 400, 200, 20)  # Platform kanan
+]
+
+# Daftar Musuh
+daftar_musuh = [
+    Musuh(700, 600), # Musuh di lantai
+    Musuh(250, 420)  # Musuh di platform
+]
+
+player_velocity_y = 0
 
 # --- FUNGSI BANTUAN ---
 def tambah_partikel_api(x, y):
@@ -134,8 +151,8 @@ while running:
                 pose_aktif = "SIHIR ES"
 
             elif (not is_telunjuk_naik and not is_tengah_naik and not is_manis_naik and not is_kelingking_naik):
-                if player_rect.y >= y_awal and sedang_di_tanah:
-                    player_rect.y -= 170
+                if sedang_di_tanah:
+                    player_velocity_y = -18 # Kecepatan melompat
                     pose_aktif = "LOMPAT"
                     sedang_di_tanah = False
                 else: pose_aktif = "LOMPAT (UDARA)"
@@ -147,8 +164,41 @@ while running:
                 skor += 10
 
     # 3. FISIKA & LOGIKA VISUAL
-    if player_rect.y < y_awal: player_rect.y += 10
-    else: player_rect.y = y_awal; sedang_di_tanah = True
+    # 3. FISIKA PEMAIN & MUSUH
+    
+    # -- Gravitasi Pemain --
+    if not sedang_di_tanah:
+        player_velocity_y += 0.8
+        player_rect.y += player_velocity_y
+    
+    # Cek Pijakan Pemain
+    sedang_di_tanah = False
+    for pijakan in daftar_pijakan:
+        if player_rect.colliderect(pijakan):
+            if player_velocity_y > 0 and player_rect.bottom <= pijakan.bottom + 10:
+                player_rect.bottom = pijakan.top
+                player_velocity_y = 0
+                sedang_di_tanah = True
+
+    # -- Update Musuh --
+    for musuh in daftar_musuh[:]:
+        musuh.update(daftar_pijakan, lebar)
+        
+        # TABRAKAN: PLAYER vs MUSUH (AABB Logic)
+        if player_rect.colliderect(musuh.rect):
+            # 1. KONDISI MENANG (STOMP): Pemain jatuh dari atas
+            if player_velocity_y > 0 and player_rect.bottom < musuh.rect.centery + 10:
+                daftar_musuh.remove(musuh)
+                player_velocity_y = -12 # Efek memantul
+                skor += 20
+                print("MUSUH DIKALAHKAN! +20")
+            else:
+                # 2. KONDISI KALAH (DAMAGE): Kena dari samping atau bawah
+                skor -= 10
+                # Efek Knockback
+                if player_rect.centerx < musuh.rect.centerx: player_rect.x -= 50
+                else: player_rect.x += 50
+                print("TERKENA DAMAGE! -10")
 
     kecepatan_x = player_rect.x - pos_x_sebelumnya
     if kecepatan_x > 2: img_karakter_current = img_karakter_kanan; menghadap_kanan = True
@@ -162,9 +212,17 @@ while running:
     # Karakter
     screen.blit(img_karakter_current, (player_rect.x, player_rect.y + movement_bob))
 
-    # Objek Buku Kuis (Ganti kotak kuning jadi buku)
+    # Objek Buku Kuis
     if objek_kuis.x > 0:
         gambar_buku_kuis(screen, objek_kuis)
+
+    # Objek Musuh
+    for musuh in daftar_musuh:
+        musuh.draw(screen)
+
+    # Objek Pijakan (Daftar Pijakan)
+    for pijakan in daftar_pijakan:
+        pygame.draw.rect(screen, (50, 150, 50), pijakan)
 
     # Efek Sihir
     gambar_api(screen)
