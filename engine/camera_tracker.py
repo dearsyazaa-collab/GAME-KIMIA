@@ -1,13 +1,26 @@
 import cv2
-import mediapipe as mp
 import math
+import sys
+
+try:
+    import mediapipe as mp
+    # Initialize solutions check
+    mp_hands = mp.solutions.hands
+    mp_draw = mp.solutions.drawing_utils
+except Exception as e:
+    print(f"Error initializing MediaPipe solutions: {e}")
+    try:
+        print("dir(mp) ->", dir(mp))
+    except:
+        pass
+    sys.exit(1)
 
 class CameraTracker:
     def __init__(self, device_index=0):
         self.cap = cv2.VideoCapture(device_index)
-        self.mp_hands = mp.solutions.hands
+        self.mp_hands = mp_hands
         self.hands = self.mp_hands.Hands(max_num_hands=1, min_detection_confidence=0.7, min_tracking_confidence=0.7)
-        self.mp_draw = mp.solutions.drawing_utils
+        self.mp_draw = mp_draw
 
     def _hitung_jarak(self, p1, p2):
         return math.sqrt((p1.x - p2.x)**2 + (p1.y - p2.y)**2)
