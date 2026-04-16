@@ -10,6 +10,9 @@ class Player:
         # Physics
         self.velocity_y = 0
         self.on_ground = False
+        
+        # Chemistry Inventory
+        self.inventory = {'H': 0, 'O': 0, 'H2O': 0}
 
         # Load Sprite
         try:
