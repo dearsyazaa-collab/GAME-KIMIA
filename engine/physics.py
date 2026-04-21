@@ -22,3 +22,7 @@ class PhysicsEngine:
                     entity.rect.bottom = plat.top
                     entity.velocity_y = 0
                     entity.on_ground = True
+                # Menangani tabrakan dari samping (dinding platform yang lebih tinggi)
+                elif entity.rect.right > plat.left and entity.rect.centerx < plat.left:
+                    # Terdorong ke kiri bersama platform
+                    entity.rect.right = plat.left

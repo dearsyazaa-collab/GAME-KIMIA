@@ -14,6 +14,12 @@ class Player:
         # Chemistry Inventory
         self.inventory = {'H': 0, 'O': 0, 'H2O': 0}
 
+        # Magic System
+        self.magic_cooldown = 0
+        
+        # Damage / I-Frames
+        self.invulnerable_timer = 0
+
         # Load Sprite
         try:
             img_asli = pygame.image.load("assets/penyihir.png").convert_alpha()
@@ -32,6 +38,16 @@ class Player:
         if self.pose == "LOMPAT" and self.on_ground:
             self.velocity_y = -16
             self.on_ground = False
+            
+        # Cooldown timer
+        if self.magic_cooldown > 0:
+            self.magic_cooldown -= 1
+            
+        # Invulnerability timer
+        if self.invulnerable_timer > 0:
+            self.invulnerable_timer -= 1
 
     def draw(self, surface):
-        surface.blit(self.current_image, (self.rect.x, self.rect.y))
+        # Efek kedip (Blink) setiap 5 frame saat sedang kebal
+        if self.invulnerable_timer == 0 or (self.invulnerable_timer // 5) % 2 == 0:
+            surface.blit(self.current_image, (self.rect.x, self.rect.y))
