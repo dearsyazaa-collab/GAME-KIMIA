@@ -7,6 +7,42 @@ class Dashboard:
         self.font_inv = pygame.font.SysFont("Verdana", 18, bold=True)
         self.font_skor = pygame.font.SysFont("Impact", 30)
 
+    def wrap_text(self, text, font, max_width):
+        words = text.split(' ')
+        lines = []
+        current_line = []
+        for word in words:
+            current_line.append(word)
+            test_line = ' '.join(current_line)
+            if font.size(test_line)[0] > max_width:
+                current_line.pop()
+                lines.append(' '.join(current_line))
+                current_line = [word]
+        if current_line:
+            lines.append(' '.join(current_line))
+        return lines
+
+    def draw_info_panel(self, screen, teks_edukasi):
+        if not teks_edukasi:
+            return
+            
+        panel_w, panel_h = 900, 120
+        panel_x = (screen.get_width() - panel_w) // 2
+        panel_y = screen.get_height() - 140
+        
+        overlay = pygame.Surface((panel_w, panel_h))
+        overlay.set_alpha(150)
+        overlay.fill((0, 0, 0))
+        screen.blit(overlay, (panel_x, panel_y))
+        
+        lines = self.wrap_text(teks_edukasi, self.font_utama, panel_w - 40)
+        y_offset = panel_y + (panel_h - (len(lines) * 30)) // 2
+        for line in lines:
+            txt_surface = self.font_utama.render(line, True, (255, 255, 255))
+            txt_rect = txt_surface.get_rect(center=(panel_x + panel_w//2, y_offset + 15))
+            screen.blit(txt_surface, txt_rect)
+            y_offset += 30
+
     def draw_hud(self, screen, player, camera_frame=None, current_level=1):
         # UI Kiri Atas (Inventory, Score, HP, Pose, Magic, Mission)
         ui_bg = pygame.Surface((550, 175))
@@ -49,6 +85,8 @@ class Dashboard:
             misi_text = "Misi: Membuat Garam Dapur (NaCl) - Ikatan Ion"
         elif current_level == 2:
             misi_text = "Misi: Membuat Air (H2O) - Ikatan Kovalen"
+        elif current_level == 3:
+            misi_text = "Misi: Membangun Atom Lithium (3 Proton, 4 Neutron)"
         else:
             misi_text = "Misi: Eksplorasi Dunia Kimia"
             

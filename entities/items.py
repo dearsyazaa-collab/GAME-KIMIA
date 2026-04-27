@@ -2,9 +2,10 @@ import pygame
 import random
 
 class Atom:
-    def __init__(self, x, y, atom_type):
+    def __init__(self, x, y, atom_type, fact_text=""):
         self.rect = pygame.Rect(x, y, 40, 40) # Treat as 40x40 area for collision
         self.atom_type = atom_type 
+        self.fact_text = fact_text
         
         # Setup font for drawing
         self.font = pygame.font.SysFont("Verdana", 24, bold=True)
@@ -92,20 +93,44 @@ class ItemManager:
         if self.altar:
             self.altar.draw(surface)
 
-class QuestionBlock:
+class BukuKuis:
     def __init__(self, x, y):
         self.rect = pygame.Rect(x, y, 40, 40)
         self.atom_type = "KUIS" # Menggunakan 'atom_type' agar bisa kompatibel dengan sistem collision saat ini
         self.font = pygame.font.SysFont("Verdana", 28, bold=True)
         
     def draw(self, surface):
-        # Kotak berwarna ungu dengan tanda tanya
-        pygame.draw.rect(surface, (150, 50, 200), self.rect, border_radius=8)
-        pygame.draw.rect(surface, (255, 255, 255), self.rect, 2, border_radius=8)
+        # Kotak berwarna emas kebiruan / icon buku
+        pygame.draw.rect(surface, (50, 100, 200), self.rect, border_radius=5)
+        pygame.draw.rect(surface, (255, 215, 0), self.rect, 3, border_radius=5) # Border emas
         
-        txt_surf = self.font.render("?", True, (255, 255, 255))
-        txt_rect = txt_surf.get_rect(center=self.rect.center)
-        surface.blit(txt_surf, txt_rect)
+        # Gambar seperti halaman buku
+        pygame.draw.line(surface, (255, 255, 255), (self.rect.x + 10, self.rect.y + 10), (self.rect.x + 30, self.rect.y + 10), 2)
+        pygame.draw.line(surface, (255, 255, 255), (self.rect.x + 10, self.rect.y + 20), (self.rect.x + 30, self.rect.y + 20), 2)
+        pygame.draw.line(surface, (255, 255, 255), (self.rect.x + 10, self.rect.y + 30), (self.rect.x + 20, self.rect.y + 30), 2)
+
+class CheckpointBuku:
+    def __init__(self, x, y, fact_text):
+        self.rect = pygame.Rect(x, y, 50, 40)
+        self.atom_type = "CHECKPOINT"
+        self.fact_text = fact_text
+        self.font = pygame.font.SysFont("Verdana", 20, bold=True)
+        
+    def draw(self, surface):
+        # Buku berwarna merah/coklat (berbeda dari buku kuis)
+        pygame.draw.rect(surface, (180, 50, 50), self.rect, border_radius=5)
+        pygame.draw.rect(surface, (255, 200, 100), self.rect, 3, border_radius=5) # Border
+        
+        # Gambar halaman
+        pygame.draw.line(surface, (255, 255, 255), (self.rect.x + 10, self.rect.y + 10), (self.rect.x + 40, self.rect.y + 10), 2)
+        pygame.draw.line(surface, (255, 255, 255), (self.rect.x + 10, self.rect.y + 20), (self.rect.x + 40, self.rect.y + 20), 2)
+        pygame.draw.line(surface, (255, 255, 255), (self.rect.x + 10, self.rect.y + 30), (self.rect.x + 30, self.rect.y + 30), 2)
+        
+        # Icon "i" untuk info
+        pygame.draw.circle(surface, (255, 255, 255), (self.rect.right - 10, self.rect.top + 10), 8)
+        pygame.draw.circle(surface, (0, 0, 0), (self.rect.right - 10, self.rect.top + 10), 8, 1)
+        i_surf = self.font.render("i", True, (0, 0, 0))
+        surface.blit(i_surf, (self.rect.right - 14, self.rect.top - 4))
 
 class Obstacle:
     def __init__(self, x, y, width, height, obs_type):

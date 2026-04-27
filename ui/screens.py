@@ -81,3 +81,63 @@ class Screens:
         inst_surf = self.text_font.render("Tekan SPACE untuk Lanjut", True, (200, 200, 200))
         inst_rect = inst_surf.get_rect(center=(self.width // 2, self.height // 2 + 110))
         screen.blit(inst_surf, inst_rect)
+
+    def draw_level_summary(self, screen, compound_name, compound_fact, can_continue):
+        screen.fill((20, 20, 40))  # Dark blue background
+        
+        # Title
+        title_surf = self.title_font.render("REAKSI BERHASIL!", True, (50, 255, 50))
+        title_rect = title_surf.get_rect(center=(self.width // 2, 100))
+        screen.blit(title_surf, title_rect)
+        
+        # Senyawa Terbentuk
+        sub_surf = self.subtitle_font.render(f"Senyawa Terbentuk: {compound_name}", True, (255, 215, 0))
+        sub_rect = sub_surf.get_rect(center=(self.width // 2, 200))
+        screen.blit(sub_surf, sub_rect)
+        
+        # Visual/Kotak Fakta
+        fact_rect = pygame.Rect(self.width // 8, 280, self.width * 3 // 4, 250)
+        pygame.draw.rect(screen, (50, 50, 70), fact_rect, border_radius=10)
+        pygame.draw.rect(screen, (255, 255, 255), fact_rect, 2, border_radius=10)
+        
+        # Override compound_fact based on compound_name for casual language
+        if compound_name == "NaCl":
+            compound_fact = "Na itu murah hati, dia kasih 1 elektronnya ke Cl yang butuh. Hasilnya? Ikatan Ion yang kuat kayak cinta mereka!"
+        elif compound_name == "H2O":
+            compound_fact = "H dan O itu tim solid. Mereka patungan (sharing) elektron biar sama-sama stabil. Itulah Ikatan Kovalen!"
+        elif compound_name == "Lithium":
+            compound_fact = "Di pusat atom ada 'geng' Proton dan Neutron. Mereka yang nentuin massa atom. Makin banyak mereka, makin berat atomnya!"
+            
+        # Teks Edukasi (Fakta Senyawa) - Simple word wrap
+        words = compound_fact.split(' ')
+        lines = []
+        current_line = []
+        for word in words:
+            current_line.append(word)
+            test_line = ' '.join(current_line)
+            if self.text_font.size(test_line)[0] > fact_rect.width - 40:
+                current_line.pop()
+                lines.append(' '.join(current_line))
+                current_line = [word]
+        if current_line:
+            lines.append(' '.join(current_line))
+            
+        y_offset = 310
+        for line in lines:
+            line_surf = self.text_font.render(line, True, (255, 255, 255))
+            line_rect = line_surf.get_rect(center=(self.width // 2, y_offset))
+            screen.blit(line_surf, line_rect)
+            y_offset += 35
+            
+        # Instruction
+        if can_continue:
+            # Berkedip
+            if pygame.time.get_ticks() % 1000 < 500:
+                inst_surf = self.subtitle_font.render("Tekan SPACE untuk Lanjut", True, (200, 255, 200))
+                inst_rect = inst_surf.get_rect(center=(self.width // 2, self.height - 100))
+                screen.blit(inst_surf, inst_rect)
+        else:
+            inst_surf = self.text_font.render("Membaca informasi...", True, (150, 150, 150))
+            inst_rect = inst_surf.get_rect(center=(self.width // 2, self.height - 100))
+            screen.blit(inst_surf, inst_rect)
+

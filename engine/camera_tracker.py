@@ -5,15 +5,10 @@ import threading
 
 try:
     import mediapipe as mp
-    # Initialize solutions check
     mp_hands = mp.solutions.hands
     mp_draw = mp.solutions.drawing_utils
 except Exception as e:
     print(f"Error initializing MediaPipe solutions: {e}")
-    try:
-        print("dir(mp) ->", dir(mp))
-    except:
-        pass
     sys.exit(1)
 
 class CameraTracker:
@@ -25,8 +20,10 @@ class CameraTracker:
         
         # Threading variables
         self.current_frame = None
-        self.current_pose = "STANDBY"
-        self.current_index_finger_pos = None # Menyimpan posisi jari telunjuk (x, y)
+        self.fingers_up = 0
+        self.is_fire_pose = False
+        self.is_pinching = False
+        self.current_index_finger_pos = None
         self.is_running = False
         self.lock = threading.Lock()
         self.thread = None
@@ -35,13 +32,11 @@ class CameraTracker:
         return math.sqrt((p1.x - p2.x)**2 + (p1.y - p2.y)**2)
 
     def start(self):
-        """Memulai thread kamera"""
         self.is_running = True
         self.thread = threading.Thread(target=self.run, daemon=True)
         self.thread.start()
 
     def run(self):
-        """Loop latar belakang untuk membaca dan memproses frame MediaPipe"""
         while self.is_running:
             success, frame = self.cap.read()
             if not success:
@@ -51,7 +46,10 @@ class CameraTracker:
             rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             result = self.hands.process(rgb)
             
-            pose_aktif = "STANDBY"
+            # Reset values for each frame
+            fingers = 0
+            fire_pose = False
+            pinch = False
             finger_pos = None
             
             if result.multi_hand_landmarks:
@@ -59,7 +57,6 @@ class CameraTracker:
                     self.mp_draw.draw_landmarks(frame, hand_landmarks, self.mp_hands.HAND_CONNECTIONS)
                     lm = hand_landmarks.landmark
                     
-                    wrist = lm[0]
                     thumb_tip, index_tip = lm[4], lm[8]
                     middle_tip, ring_tip, pinky_tip = lm[12], lm[16], lm[20]
                     index_pip, middle_pip = lm[6], lm[10]
@@ -69,32 +66,27 @@ class CameraTracker:
                     is_middle_up = middle_tip.y < middle_pip.y
                     is_ring_up = ring_tip.y < ring_pip.y
                     is_pinky_up = pinky_tip.y < pinky_pip.y
+                    is_thumb_up = thumb_tip.y < lm[3].y
 
-                    # Dapatkan koordinat telunjuk (landmark 8)
-                    # Mengalikan dengan resolusi game (1000x700)
+                    fingers = sum([is_index_up, is_middle_up, is_ring_up, is_pinky_up, is_thumb_up])
+                    
+                    # Pose Dua Jari untuk Api
+                    fire_pose = (is_index_up and is_middle_up and not is_ring_up and not is_pinky_up)
+                    
+                    pinch = (self._hitung_jarak(thumb_tip, index_tip) < 0.06)
+                    
                     finger_x = int(index_tip.x * 1000)
                     finger_y = int(index_tip.y * 700)
                     finger_pos = (finger_x, finger_y)
-
-                    if self._hitung_jarak(thumb_tip, index_tip) < 0.06:
-                        pose_aktif = "SIHIR API"
-                    elif (is_index_up and is_middle_up and not is_ring_up and not is_pinky_up):
-                        pose_aktif = "SIHIR ES"
-                    elif (not is_index_up and not is_middle_up and not is_ring_up and not is_pinky_up):
-                        pose_aktif = "LOMPAT"
-                    elif is_index_up and is_pinky_up and not is_middle_up:
-                        pose_aktif = "KUIS"
-                    else: 
-                        pose_aktif = "JALAN"
             
-            # Gunakan lock saat meng-update shared variable
             with self.lock:
                 self.current_frame = frame
-                self.current_pose = pose_aktif
+                self.fingers_up = fingers
+                self.is_fire_pose = fire_pose
+                self.is_pinching = pinch
                 self.current_index_finger_pos = finger_pos
 
     def stop(self):
-        """Menghentikan thread dan merilis kamera"""
         self.is_running = False
         if self.thread is not None:
             self.thread.join()

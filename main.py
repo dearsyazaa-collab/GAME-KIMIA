@@ -18,11 +18,20 @@ def main():
     pygame.display.set_caption("Alchemist Adventure")
     clock = pygame.time.Clock()
 
+    # Initialize Mixer & Music
+    try:
+        pygame.mixer.init()
+        pygame.mixer.music.load("assets/music.mp3")
+        pygame.mixer.music.set_volume(0.5)
+        pygame.mixer.music.play(-1)
+    except Exception as e:
+        print(f"Warning: Gagal memutar musik: {e}")
+
     # Initialize modules
     camera = CameraTracker(device_index=0)
     camera.start()
     level_manager = LevelManager(screen_width, screen_height)
-    physics_engine = PhysicsEngine(gravity=0.8, terminal_velocity=18)
+    physics_engine = PhysicsEngine(gravity=0.8, terminal_velocity=15)
     item_manager = ItemManager()
     player = Player(200, 400) # Starting safe position
     dashboard = Dashboard()
@@ -33,6 +42,12 @@ def main():
     game_state = "MENU"
     game_paused = False
     countdown_timer = 0
+    checkpoint_timer = 0
+    summary_timer = 0
+    quiz_cooldown_timer = 0
+    quiz_result_timer = 0
+    quiz_was_correct = False
+    current_info_text = "Selamat datang! Gunakan sihir untuk melewati rintangan."
 
     # Load level pertama
     level_manager.load_level(1, item_manager)
@@ -58,8 +73,8 @@ def main():
                         game_state = "GET_READY"
                         countdown_timer = 180
                         game_paused = False
-                elif game_state == "LEVEL_COMPLETE":
-                    if event.key == pygame.K_SPACE:
+                elif game_state == "LEVEL_SUMMARY":
+                    if event.key == pygame.K_SPACE and summary_timer <= 0:
                         level_manager.current_level += 1
                         if not level_manager.load_level(level_manager.current_level, item_manager):
                             print("Selamat! Kamu telah menyelesaikan semua level!")
@@ -71,11 +86,15 @@ def main():
                             player.velocity_y = 0
                             game_state = "GET_READY"
                             countdown_timer = 180
+                            game_paused = False
+                            checkpoint_timer = 0
 
         # 1. Input Processing (Camera is always running)
         with camera.lock:
             frame = camera.current_frame
-            pose = camera.current_pose
+            fingers = getattr(camera, 'fingers_up', 0)
+            fire_pose = getattr(camera, 'is_fire_pose', False)
+            pinch = getattr(camera, 'is_pinching', False)
             finger_pos = getattr(camera, 'current_index_finger_pos', None)
         
         # --- STATE MACHINE RENDERING & LOGIC ---
@@ -111,14 +130,43 @@ def main():
             screen.blit(t_surface, rect_t)
             
         elif game_state == "PLAYING":
+            # State-Based Input Isolation untuk PLAYING
+            pose = "STANDBY"
+            if fire_pose:
+                pose = "SIHIR API"
+            elif pinch:
+                pose = "SIHIR ES"
+            elif fingers >= 4:
+                pose = "LOMPAT"
+                
+            # Logika Gerakan Horizontal (Berdasarkan posisi jari)
+            move_dir = 0
+            # ISOLASI INPUT: Hanya gerak jika tidak sedang mengeluarkan sihir
+            if pose not in ["SIHIR API", "SIHIR ES"] and finger_pos is not None:
+                if finger_pos[0] < 350:      # Area Mundur/Kiri (0-350)
+                    move_dir = -1
+                elif finger_pos[0] > 650:    # Area Maju/Kanan (650-1000)
+                    move_dir = 1
+                else:
+                    move_dir = 0             # Area Berhenti (350-650) - Diperlebar
+            else:
+                # Saat sihir aktif, biarkan karakter meluncur pelan (friksi)
+                move_dir = 0
+                    
             # 2. Game Logic / Level Update
             if not game_paused:
-                player.update(pose)
+                player.update(pose, move_dir)
                 level_manager.update()
                 
                 # Scroll item manager at the exact speed of ground
                 item_manager.update(level_manager.platform_speed, screen_width)
                 particle_system.update(level_manager.platform_speed)
+                
+                # Visual sihir secara permanen di tangan karakter
+                if pose == "SIHIR API":
+                    particle_system.add_particles(player.rect.centerx + 50, player.rect.centery, color=(255, 69, 0), count=2, speed=2)
+                elif pose == "SIHIR ES":
+                    particle_system.add_particles(player.rect.centerx + 50, player.rect.centery, color=(200, 255, 255), count=2, speed=2)
                 
                 # Update rintangan yang sedang hancur
                 for obs in level_manager.obstacles[:]:
@@ -138,13 +186,21 @@ def main():
                 for item in item_manager.items[:]:
                     if player.rect.colliderect(item.rect):
                         if getattr(item, 'atom_type', '') == 'KUIS':
-                            print("Mendapat QuestionBlock! Kuis dimulai.")
-                            game_paused = True
-                            quiz_system.show_quiz()
+                            print("Mendapat BukuKuis! Kuis dimulai.")
+                            game_state = "QUIZ_MODE"
+                            quiz_cooldown_timer = 90
+                            if hasattr(item, 'question'):
+                                quiz_system.show_quiz(item.question, item.options, item.correct_idx, item.explanation)
+                            else:
+                                quiz_system.show_quiz()
                             item_manager.items.remove(item)
                         else:
                             print(f"Mendapat {item.atom_type}!")
                             player.inventory[item.atom_type] = player.inventory.get(item.atom_type, 0) + 1
+                            if hasattr(item, 'fact_text') and item.fact_text:
+                                current_info_text = item.fact_text
+                            else:
+                                current_info_text = f"Bagus! Kamu menemukan {item.atom_type}!"
                             item_manager.items.remove(item)
                             
                 # Obstacle Collision & Magic Logic
@@ -160,30 +216,32 @@ def main():
                             target_hit = True
 
                     if obs.obs_type == "KAYU":
-                        # Hancurkan kayu jika pose SIHIR API dan tangan menunjuk ke KAYU
-                        if target_hit and pose == "SIHIR API" and player.magic_cooldown == 0:
-                            obs.is_destroying = True
-                            obs.destroy_timer = 30
-                            print("KAYU mulai dihancurkan dengan SIHIR API (Target Tangan)!")
-                            player.score += 50
-                            player.magic_cooldown = 180
-                            # Ledakan awal partikel api
-                            particle_system.add_particles(obs.rect.centerx, obs.rect.centery, color=(255, 69, 0), count=20, speed=3)
+                        if pose == "SIHIR API":
+                            if player.magic_cooldown == 0 and (target_hit or player.rect.colliderect(obs.rect)):
+                                obs.is_destroying = True
+                                obs.destroy_timer = 30
+                                print("KAYU mulai dihancurkan dengan SIHIR API!")
+                                current_info_text = "Luar Biasa! Reaksi Eksoterm menghasilkan panas yang membakar kayu!"
+                                player.score += 50
+                                player.magic_cooldown = 180
+                                particle_system.add_particles(obs.rect.centerx, obs.rect.centery, color=(255, 69, 0), count=40, speed=4)
                         elif player.rect.colliderect(obs.rect):
                             # Dorong pemain agar tidak bisa lewat (berlaku seperti dinding)
-                            if player.rect.right > obs.rect.left and player.rect.centerx < obs.rect.left:
-                                player.rect.right = obs.rect.left
+                            player.rect.right = obs.rect.left
                                 
                     elif obs.obs_type == "SUNGAI_BERACUN":
-                        # Bekukan sungai jika pose SIHIR ES dan tangan menunjuk ke SUNGAI_BERACUN
-                        if target_hit and pose == "SIHIR ES" and player.magic_cooldown == 0:
-                            obs.obs_type = "PIJAKAN_ES"
-                            print("SUNGAI BERACUN dibekukan menjadi PIJAKAN ES (Target Tangan)!")
-                            player.score += 50
-                            player.magic_cooldown = 180
-                            # Partikel es memancar ke atas
-                            particle_system.add_particles(obs.rect.centerx, obs.rect.y, color=(200, 255, 255), count=30, speed=2, style="fountain")
+                        if pose == "SIHIR ES":
+                            if player.magic_cooldown == 0 and (target_hit or player.rect.colliderect(obs.rect)):
+                                obs.obs_type = "PIJAKAN_ES"
+                                print("SUNGAI BERACUN dibekukan menjadi PIJAKAN ES!")
+                                current_info_text = "Tepat Sekali! Reaksi Endoterm menyerap panas di sekitar sungai!"
+                                player.score += 50
+                                player.magic_cooldown = 180
+                                particle_system.add_particles(obs.rect.centerx, obs.rect.y, color=(200, 255, 255), count=30, speed=2, style="fountain")
                         elif player.rect.colliderect(obs.rect):
+                            # Efek pentalan saat jatuh ke sungai beracun
+                            player.rect.bottom = obs.rect.top - 1
+                            player.velocity_y = -12
                             # Kurangi HP jika menginjak racun dan sedang tidak kebal
                             if player.invulnerable_timer == 0:
                                 player.hp -= 15
@@ -191,22 +249,63 @@ def main():
                                 if player.hp <= 0:
                                     print("GAME OVER - Terkena Sungai Beracun")
                                     game_state = "GAME_OVER"
-            else:
-                # Game dalam state Pause untuk Kuis
-                quiz_result = quiz_system.check_answer(finger_pos, pose)
-                if quiz_result is not None:
-                    if quiz_result:
-                        print("Kuis: Jawaban Benar! (+100 Skor)")
-                        player.score += 100
-                    else:
-                        print("Kuis: Jawaban Salah! (-10 HP)")
-                        player.hp -= 10
+
+                # Enemy Collision & Magic Logic
+                for enemy in level_manager.enemy_group:
+                    if enemy.state == "DEAD":
+                        continue
                         
-                    game_paused = False # Lanjutkan game setelah menjawab
-                    if player.hp <= 0:
-                        print("GAME OVER - HP Habis")
-                        game_state = "GAME_OVER"
-                
+                    # Deteksi target sihir (finger_pos)
+                    target_hit = False
+                    if finger_pos is not None:
+                        if enemy.rect.collidepoint(finger_pos[0], finger_pos[1]):
+                            target_hit = True
+
+                    # 1. SIHIR API (Eksoterm)
+                    if pose == "SIHIR API" and (target_hit or player.rect.colliderect(enemy.rect)):
+                        if player.magic_cooldown == 0:
+                            enemy.die()
+                            current_info_text = "Reaksi Eksoterm: Energi panas menghancurkan molekul musuh!"
+                            player.score += 75
+                            player.magic_cooldown = 120
+                            particle_system.add_particles(enemy.rect.centerx, enemy.rect.centery, color=(255, 69, 0), count=30, speed=5, style="explosion")
+                    
+                    # 2. SIHIR ES (Endoterm/Presipitasi)
+                    elif pose == "SIHIR ES" and (target_hit or player.rect.colliderect(enemy.rect)):
+                        if player.magic_cooldown == 0 and enemy.state != "FROZEN":
+                            enemy.freeze(300) # 5 detik
+                            current_info_text = "Reaksi Endoterm: Suhu turun, pergerakan musuh terhenti!"
+                            player.score += 50
+                            player.magic_cooldown = 120
+                            particle_system.add_particles(enemy.rect.centerx, enemy.rect.y, color=(200, 255, 255), count=20, speed=3, style="fountain")
+
+                    # 3. Collision Fisik (Stomp atau Damage)
+                    elif player.rect.colliderect(enemy.rect):
+                        # Stomp Mechanic: Pemain menginjak musuh dari atas
+                        if player.velocity_y > 0 and player.rect.bottom < enemy.rect.centery + 10:
+                            enemy.die()
+                            player.velocity_y = -12 # Memantul
+                            player.score += 100
+                            current_info_text = "Serangan Presisi! Struktur musuh hancur!"
+                            particle_system.add_particles(enemy.rect.centerx, enemy.rect.top, color=(128, 0, 128), count=15, speed=2)
+                        
+                        # Damage: Tabrakan samping/bawah
+                        elif player.invulnerable_timer == 0 and enemy.state != "FROZEN":
+                            player.hp -= 20
+                            player.invulnerable_timer = 90
+                            current_info_text = "Awas! Tabrakan dengan musuh mengurangi HP!"
+                            
+                            # Knockback Effect (Mario-style)
+                            # Pantul ke belakang dan ke atas sedikit
+                            player.velocity_y = -10
+                            if player.facing_right:
+                                player.velocity_x = -10
+                            else:
+                                player.velocity_x = 10
+                                
+                            if player.hp <= 0:
+                                game_state = "GAME_OVER"
+
             # Altar Collision & Chemistry Reaction Logic
             if not game_paused and item_manager.altar and player.rect.colliderect(item_manager.altar.rect):
                 level_manager.platform_speed = 0 # Berhenti saat di altar
@@ -228,9 +327,18 @@ def main():
                         player.inventory[res_name] = player.inventory.get(res_name, 0) + 1
                         player.score += 100
                         print(f"Reaksi Berhasil! Membentuk {res_name}")
+                        current_info_text = "REAKSI SEMPURNA! Ikatan Kimia Terbentuk!"
                         
-                        # Lanjut level: Pindah ke state LEVEL_COMPLETE
-                        game_state = "LEVEL_COMPLETE"
+                        # Lanjut level: Pindah ke state LEVEL_SUMMARY
+                        game_state = "LEVEL_SUMMARY"
+                        summary_timer = 180 # 3 detik pada 60 FPS
+                        
+                        # Trigger kembang api
+                        for _ in range(10):
+                            rx = random.randint(100, 900)
+                            ry = random.randint(100, 400)
+                            color = random.choice([(255,50,50), (50,255,50), (50,50,255), (255,215,0), (255,50,255), (50,255,255)])
+                            particle_system.add_particles(rx, ry, color=color, count=50, speed=5, style="explosion", size_range=(3,6), lifetime_range=(30,60))
                     else:
                         print("Reaksi Gagal! Bahan tidak cukup atau salah.")
                         if player.invulnerable_timer == 0:
@@ -286,18 +394,141 @@ def main():
             item_manager.draw(screen)
             player.draw(screen)
             particle_system.draw(screen)
+            if frame is not None:
+                dashboard.draw_hud(screen, player, frame, level_manager.current_level)
+                
+            # Render Subtitle Bar
+            dashboard.draw_info_panel(screen, current_info_text)
+
+            # Debug: Garis Bantu Area Kontrol (Opsional, bisa dihapus nanti)
+            pygame.draw.line(screen, (255, 255, 255), (350, 0), (350, 700), 1)
+            pygame.draw.line(screen, (255, 255, 255), (650, 0), (650, 700), 1)
+            
+        elif game_state == "QUIZ_MODE":
+            # Render background dan game world (diam)
+            level_manager.draw(screen)
+            item_manager.draw(screen)
+            player.draw(screen)
+            particle_system.draw(screen)
             
             if frame is not None:
                 dashboard.draw_hud(screen, player, frame, level_manager.current_level)
                 
-            if game_paused:
-                quiz_system.draw(screen, finger_pos)
+            # Tambahkan overlay hitam transparan untuk fokus
+            overlay = pygame.Surface((screen_width, screen_height))
+            overlay.set_alpha(200)
+            overlay.fill((0, 0, 0))
+            screen.blit(overlay, (0, 0))
+                
+            # Tampilkan Kuis
+            quiz_system.draw(screen)
+            
+            if quiz_cooldown_timer > 0:
+                quiz_cooldown_timer -= 1
+                font_besar = pygame.font.SysFont("Impact", 40)
+                txt_cooldown = font_besar.render("Membaca Soal...", True, (255, 255, 0))
+                rect_c = txt_cooldown.get_rect(center=(screen_width//2, screen_height - 50))
+                screen.blit(txt_cooldown, rect_c)
+            else:
+                # Logika penerimaan jawaban
+                jawaban_pemain = None
+                if fingers == 1:
+                    jawaban_pemain = 0
+                elif fingers == 2:
+                    jawaban_pemain = 1
+                elif fingers == 3:
+                    jawaban_pemain = 2
+                    
+                if jawaban_pemain is not None:
+                    if jawaban_pemain == quiz_system.correct_idx:
+                        print("Kuis: Jawaban Benar! (+100 Skor)")
+                        player.score += 100
+                        quiz_was_correct = True
+                        current_info_text = "Jawaban Benar! Kerja Bagus!"
+                    else:
+                        print("Kuis: Jawaban Salah! (-10 HP)")
+                        player.hp -= 10
+                        quiz_was_correct = False
+                        current_info_text = "Jawaban Salah! Ayo coba lagi!"
+                        
+                    game_state = "QUIZ_RESULT"
+                    quiz_result_timer = 180
+
+        elif game_state == "QUIZ_RESULT":
+            # Render background dan game world (diam)
+            level_manager.draw(screen)
+            item_manager.draw(screen)
+            player.draw(screen)
+            particle_system.draw(screen)
+            
+            if frame is not None:
+                dashboard.draw_hud(screen, player, frame, level_manager.current_level)
+                
+            # Overlay warna
+            overlay = pygame.Surface((screen_width, screen_height))
+            overlay.set_alpha(200)
+            if quiz_was_correct:
+                overlay.fill((0, 150, 0)) # Hijau
+            else:
+                overlay.fill((150, 0, 0)) # Merah
+            screen.blit(overlay, (0, 0))
+            
+            # Teks Hasil
+            font_besar = pygame.font.SysFont("Impact", 60)
+            if quiz_was_correct:
+                txt_hasil = font_besar.render("TEPAT SEKALI! +100 Skor", True, (255, 255, 255))
+            else:
+                txt_hasil = font_besar.render("YAH, KURANG TEPAT! -10 HP", True, (255, 255, 255))
+            rect_hasil = txt_hasil.get_rect(center=(screen_width//2, screen_height//2 - 50))
+            screen.blit(txt_hasil, rect_hasil)
+            
+            # Teks Pembahasan
+            font_pembahasan = pygame.font.SysFont("Verdana", 24)
+            words = quiz_system.explanation.split()
+            lines = []
+            current_line = []
+            current_length = 0
+            for word in words:
+                if current_length + len(word) > 50:
+                    lines.append(" ".join(current_line))
+                    current_line = [word]
+                    current_length = len(word)
+                else:
+                    current_line.append(word)
+                    current_length += len(word) + 1
+            if current_line:
+                lines.append(" ".join(current_line))
+                
+            y_offset = screen_height//2 + 50
+            for line in lines:
+                txt_penjelasan = font_pembahasan.render(line, True, (255, 255, 255))
+                rect_p = txt_penjelasan.get_rect(center=(screen_width//2, y_offset))
+                screen.blit(txt_penjelasan, rect_p)
+                y_offset += 35
+                
+            quiz_result_timer -= 1
+            if quiz_result_timer <= 0:
+                quiz_system.hide_quiz()
+                game_state = "PLAYING"
+                if player.hp <= 0:
+                    print("GAME OVER - HP Habis")
+                    game_state = "GAME_OVER"
                 
         elif game_state == "GAME_OVER":
             screens.draw_game_over(screen, player.score)
             
-        elif game_state == "LEVEL_COMPLETE":
-            screens.draw_level_complete(screen, player.score)
+        elif game_state == "LEVEL_SUMMARY":
+            if summary_timer > 0:
+                summary_timer -= 1
+                
+            particle_system.update(0)
+            
+            can_continue = (summary_timer <= 0)
+            res_name = getattr(item_manager.altar, 'result_name', '')
+            res_fact = getattr(item_manager.altar, 'result_fact', 'Senyawa yang sangat berguna!')
+            
+            screens.draw_level_summary(screen, res_name, res_fact, can_continue)
+            particle_system.draw(screen)
 
         pygame.display.flip()
         clock.tick(60)

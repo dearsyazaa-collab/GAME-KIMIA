@@ -7,7 +7,8 @@ class PhysicsEngine:
 
     def apply_gravity(self, entity):
         """Menambahkan efek gravitasi pada entitas"""
-        entity.velocity_y += self.gravity
+        gravity = getattr(entity, 'gravity', self.gravity)
+        entity.velocity_y += gravity
         if entity.velocity_y > self.terminal_velocity:
             entity.velocity_y = self.terminal_velocity
         entity.rect.y += entity.velocity_y
@@ -23,6 +24,7 @@ class PhysicsEngine:
                     entity.velocity_y = 0
                     entity.on_ground = True
                 # Menangani tabrakan dari samping (dinding platform yang lebih tinggi)
-                elif entity.rect.right > plat.left and entity.rect.centerx < plat.left:
+                # Hanya terapkan dorongan samping jika pemain benar-benar di depan dinding (bukan melompat dari bawah)
+                elif entity.velocity_y >= 0 and entity.rect.right > plat.left and entity.rect.centerx < plat.left:
                     # Terdorong ke kiri bersama platform
                     entity.rect.right = plat.left
