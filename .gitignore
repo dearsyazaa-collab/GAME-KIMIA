@@ -1,0 +1,26 @@
+# === BUILD OUTPUT ===
+# Folder build PyInstaller (file sementara, tidak perlu di-push)
+build/
+# Folder dist berisi .exe yang sudah dikompilasi
+dist/
+
+# === CACHE PYTHON ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# === DATA PRIBADI PENGGUNA (JANGAN DI-PUSH!) ===
+# File ini berisi data akun & skor pemain yang bersifat privat
+data_akun.json
+data_skor.json
+
+# === FILE SEMENTARA WINDOWS ===
+*.tmp
+Thumbs.db
+Desktop.ini
+
+# === FILE IDE ===
+.vscode/
+.idea/
+*.code-workspace

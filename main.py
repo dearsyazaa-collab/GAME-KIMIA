@@ -1,6 +1,114 @@
 import pygame
 import sys
 import random
+import json
+import os
+
+# === MANAJEMEN AKUN PENGGUNA (DINAMIS - DISIMPAN KE FILE) ===
+# Path file JSON tempat semua akun pengguna disimpan secara permanen
+FILE_AKUN = "data_akun.json"
+
+# === SISTEM PELACAKAN SKOR PER PEMAIN ===
+# Path file JSON khusus untuk menyimpan riwayat skor setiap pemain
+FILE_SKOR = "data_skor.json"
+
+# Dictionary sementara untuk menyimpan data pemain dalam satu sesi bermain
+# Format: { 'nama_pemain': { 'skor_kuis': 0, 'soal_benar': 0, 'total_soal': 0 } }
+data_pemain = {}
+
+def muat_data_akun():
+    """Membaca semua data akun dari file JSON. Mengembalikan dict kosong jika file belum ada."""
+    # Periksa apakah file akun sudah ada di sistem
+    if os.path.exists(FILE_AKUN):
+        # Buka dan baca isi file JSON, kembalikan sebagai dictionary Python
+        with open(FILE_AKUN, "r") as f:
+            return json.load(f)
+    # Jika file belum ada, kembalikan dictionary kosong (belum ada akun)
+    return {}
+
+def simpan_data_akun(data_akun):
+    """Menyimpan semua data akun ke file JSON agar tidak hilang saat game ditutup."""
+    # Tulis dictionary ke file JSON dengan format yang rapi (indent=4)
+    with open(FILE_AKUN, "w") as f:
+        json.dump(data_akun, f, indent=4)
+
+def muat_data_skor():
+    """Membaca riwayat skor semua pemain dari file JSON."""
+    # Cek apakah file skor sudah ada
+    if os.path.exists(FILE_SKOR):
+        with open(FILE_SKOR, "r") as f:
+            return json.load(f)
+    # Jika belum ada, kembalikan dictionary kosong
+    return {}
+
+def simpan_skor_pemain(nama_pemain, skor_kuis, soal_benar, total_soal):
+    """
+    Menyimpan hasil skor kuis pemain ke file JSON secara permanen.
+    Jika pemain sudah punya riwayat, skor terbaik (high score) akan diperbarui.
+    """
+    # Muat semua data skor yang sudah ada dari file
+    semua_skor = muat_data_skor()
+
+    # Cek apakah pemain ini sudah pernah menyimpan skor sebelumnya
+    if nama_pemain in semua_skor:
+        # Jika skor baru lebih tinggi, timpa dengan skor terbaru (high score)
+        if skor_kuis > semua_skor[nama_pemain].get("skor_terbaik", 0):
+            semua_skor[nama_pemain]["skor_terbaik"] = skor_kuis
+        # Selalu simpan data sesi terbaru
+        semua_skor[nama_pemain]["skor_terakhir"] = skor_kuis
+        semua_skor[nama_pemain]["soal_benar_terakhir"] = soal_benar
+        semua_skor[nama_pemain]["total_soal_terakhir"] = total_soal
+    else:
+        # Pemain baru, buat entri pertama untuk pemain ini di dictionary
+        semua_skor[nama_pemain] = {
+            "skor_terbaik": skor_kuis,
+            "skor_terakhir": skor_kuis,
+            "soal_benar_terakhir": soal_benar,
+            "total_soal_terakhir": total_soal
+        }
+
+    # Tulis kembali seluruh data skor ke file JSON agar tersimpan permanen
+    with open(FILE_SKOR, "w") as f:
+        json.dump(semua_skor, f, indent=4)
+
+    # Cetak hasil pencapaian ke konsol sebagai log (berguna untuk debugging KTI)
+    print(f"\n{'='*50}")
+    print(f"HASIL AKHIR PEMAIN: {nama_pemain}")
+    print(f"Skor Kuis   : {skor_kuis} poin")
+    print(f"Soal Benar  : {soal_benar}/{total_soal}")
+    print(f"{'='*50}\n")
+
+def proses_login_atau_daftar(username, password):
+    """
+    Fungsi utama otentikasi. Menjalankan dua logika sekaligus:
+    1. Jika username BARU -> daftar otomatis dan izinkan masuk
+    2. Jika username LAMA -> validasi password sebelum mengizinkan masuk
+    Mengembalikan tuple (berhasil: bool, pesan: str)
+    """
+    # Validasi: username dan password tidak boleh kosong
+    if not username or not password:
+        return False, "Username dan Password tidak boleh kosong!"
+
+    # Muat data akun yang sudah ada dari file JSON
+    data_akun = muat_data_akun()
+
+    # Cek apakah username ini sudah pernah terdaftar sebelumnya
+    if username in data_akun:
+        # Username SUDAH ADA -> cek apakah passwordnya cocok
+        if data_akun[username] == password:
+            # Password cocok, izinkan login
+            return True, f"Login berhasil! Selamat datang, {username}!"
+        else:
+            # Password salah, tolak login
+            return False, "Password salah! Silakan coba lagi."
+    else:
+        # Username BELUM ADA -> daftarkan sebagai akun baru
+        data_akun[username] = password
+        # Simpan akun baru ke file JSON agar tersimpan permanen
+        simpan_data_akun(data_akun)
+        return True, f"Akun baru '{username}' berhasil dibuat! Selamat bermain!"
+# ================================================================
+
 from engine.camera_tracker import CameraTracker
 from engine.physics import PhysicsEngine
 from levels.level_manager import LevelManager
@@ -39,7 +147,25 @@ def main():
     screens = Screens(screen_width, screen_height)
     particle_system = ParticleSystem()
     
-    game_state = "MENU"
+    game_state = "LOGIN"
+    login_username = ""
+    login_password = ""
+    login_success_msg = ""  # Pesan sukses setelah login/daftar berhasil
+    active_field = "username"
+    login_error = ""
+    logged_in_user = ""    # Menyimpan nama pengguna yang sedang aktif bermain
+
+    # === VARIABEL SESI PELACAK SKOR KUIS ===
+    # pemain_aktif: Nama pemain yang sedang bermain saat ini (diisi setelah login berhasil)
+    pemain_aktif = ""
+    # skor_kuis_sesi: Akumulasi skor kuis dalam satu sesi bermain (direset setiap sesi baru)
+    skor_kuis_sesi = 0
+    # soal_benar_sesi: Penghitung jumlah soal yang dijawab benar dalam satu sesi
+    soal_benar_sesi = 0
+    # total_soal_sesi: Total soal kuis yang sudah muncul dalam satu sesi
+    total_soal_sesi = 0
+    # Skor maksimal yang mungkin dicapai (5 soal x 20 poin = 100 poin)
+    SKOR_PER_SOAL = 20
     game_paused = False
     countdown_timer = 0
     checkpoint_timer = 0
@@ -58,14 +184,68 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
             
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if game_state == "LOGIN":
+                    mouse_pos = event.pos
+                    u_rect = pygame.Rect(screen_width // 2 - 20, screen_height // 2 - 65, 250, 40)
+                    p_rect = pygame.Rect(screen_width // 2 - 20, screen_height // 2 - 5, 250, 40)
+                    if u_rect.collidepoint(mouse_pos):
+                        active_field = "username"
+                    elif p_rect.collidepoint(mouse_pos):
+                        active_field = "password"
+
             if event.type == pygame.KEYDOWN:
-                if game_state == "MENU":
+                if game_state == "LOGIN":
+                    if event.key == pygame.K_TAB:
+                        active_field = "password" if active_field == "username" else "username"
+                    elif event.key == pygame.K_RETURN:
+                        # Proses login atau pendaftaran akun baru secara dinamis
+                        berhasil, pesan = proses_login_atau_daftar(login_username, login_password)
+                        if berhasil:
+                            # Simpan nama pengguna yang login untuk ditampilkan di game
+                            logged_in_user = login_username
+                            login_error = ""
+                            login_success_msg = pesan
+
+                            # === INISIALISASI SESI PEMAIN AKTIF ===
+                            # Simpan nama pemain yang berhasil login ke variabel sesi pemain_aktif
+                            pemain_aktif = login_username
+
+                            # Inisialisasi entri pemain di dictionary data_pemain dengan skor awal 0
+                            # Contoh: data_pemain['luckie'] = {'skor_kuis': 0, 'soal_benar': 0, 'total_soal': 0}
+                            data_pemain[pemain_aktif] = {
+                                "skor_kuis": 0,
+                                "soal_benar": 0,
+                                "total_soal": 0
+                            }
+
+                            # Reset semua counter skor untuk sesi baru
+                            skor_kuis_sesi = 0
+                            soal_benar_sesi = 0
+                            total_soal_sesi = 0
+
+                            game_state = "MENU"
+                        else:
+                            # Tampilkan pesan error jika gagal login
+                            login_error = pesan
+                    elif event.key == pygame.K_BACKSPACE:
+                        if active_field == "username":
+                            login_username = login_username[:-1]
+                        else:
+                            login_password = login_password[:-1]
+                    else:
+                        if event.unicode and event.key not in (pygame.K_TAB, pygame.K_RETURN, pygame.K_ESCAPE):
+                            if active_field == "username":
+                                login_username += event.unicode
+                            else:
+                                login_password += event.unicode
+                elif game_state == "MENU":
                     if event.key == pygame.K_SPACE:
                         game_state = "GET_READY"
                         countdown_timer = 180
                 elif game_state == "GAME_OVER":
                     if event.key == pygame.K_r:
-                        # Reset game
+                        # Reset game dan semua counter skor untuk sesi baru
                         player = Player(200, 400)
                         item_manager = ItemManager()
                         level_manager.current_level = 1
@@ -73,6 +253,17 @@ def main():
                         game_state = "GET_READY"
                         countdown_timer = 180
                         game_paused = False
+
+                        # === RESET SKOR SESI SAAT GAME DIULANG ===
+                        # Saat pemain menekan R untuk ulangi, semua skor kuis direset ke 0
+                        skor_kuis_sesi = 0
+                        soal_benar_sesi = 0
+                        total_soal_sesi = 0
+                        # Reset entri data_pemain untuk sesi baru
+                        if pemain_aktif:
+                            data_pemain[pemain_aktif] = {"skor_kuis": 0, "soal_benar": 0, "total_soal": 0}
+                        # Reset flag penyimpanan agar skor bisa disimpan lagi
+                        screens._skor_sudah_disimpan = False
                 elif game_state == "LEVEL_SUMMARY":
                     if event.key == pygame.K_SPACE and summary_timer <= 0:
                         level_manager.current_level += 1
@@ -98,7 +289,11 @@ def main():
             finger_pos = getattr(camera, 'current_index_finger_pos', None)
         
         # --- STATE MACHINE RENDERING & LOGIC ---
-        if game_state == "MENU":
+        if game_state == "LOGIN":
+            # Render layar login dengan semua data state yang relevan
+            screens.draw_login_screen(screen, login_username, login_password, active_field, login_error)
+            
+        elif game_state == "MENU":
             screens.draw_main_menu(screen, frame)
             
         elif game_state == "GET_READY":
@@ -440,17 +635,38 @@ def main():
                     jawaban_pemain = 2
                     
                 if jawaban_pemain is not None:
+                    # Tambahkan penghitung total soal kuis yang sudah muncul
+                    total_soal_sesi += 1
+
                     if jawaban_pemain == quiz_system.correct_idx:
-                        print("Kuis: Jawaban Benar! (+100 Skor)")
-                        player.score += 100
+                        print("Kuis: Jawaban Benar! (+100 Skor Game, +20 Skor Kuis)")
+                        player.score += 100  # Skor gameplay tetap berjalan seperti biasa
+
+                        # === TAMBAH SKOR KUIS JIKA JAWABAN BENAR ===
+                        # Setiap jawaban benar memberikan SKOR_PER_SOAL poin (20 poin) ke skor kuis pemain
+                        skor_kuis_sesi += SKOR_PER_SOAL
+                        soal_benar_sesi += 1
+
+                        # Sinkronisasi: perbarui nilai di dictionary data_pemain berdasarkan pemain_aktif
+                        if pemain_aktif and pemain_aktif in data_pemain:
+                            data_pemain[pemain_aktif]["skor_kuis"] = skor_kuis_sesi
+                            data_pemain[pemain_aktif]["soal_benar"] = soal_benar_sesi
+                            data_pemain[pemain_aktif]["total_soal"] = total_soal_sesi
+
                         quiz_was_correct = True
-                        current_info_text = "Jawaban Benar! Kerja Bagus!"
+                        current_info_text = f"Jawaban Benar! +{SKOR_PER_SOAL} poin kuis! ({skor_kuis_sesi} total)"
                     else:
-                        print("Kuis: Jawaban Salah! (-10 HP)")
+                        print("Kuis: Jawaban Salah! (-10 HP, +0 Skor Kuis)")
                         player.hp -= 10
+
+                        # === JAWABAN SALAH: Skor kuis tidak bertambah (+=0) ===
+                        # Hanya total soal yang diperbarui, skor_kuis tidak berubah
+                        if pemain_aktif and pemain_aktif in data_pemain:
+                            data_pemain[pemain_aktif]["total_soal"] = total_soal_sesi
+
                         quiz_was_correct = False
-                        current_info_text = "Jawaban Salah! Ayo coba lagi!"
-                        
+                        current_info_text = "Jawaban Salah! Skor kuis tidak bertambah."
+
                     game_state = "QUIZ_RESULT"
                     quiz_result_timer = 180
 
@@ -515,8 +731,15 @@ def main():
                     game_state = "GAME_OVER"
                 
         elif game_state == "GAME_OVER":
-            screens.draw_game_over(screen, player.score)
-            
+            # Tampilkan layar game over dengan nama pemain dan skor kuis
+            screens.draw_game_over(screen, player.score, pemain_aktif, skor_kuis_sesi, soal_benar_sesi, total_soal_sesi)
+
+            # === SIMPAN SKOR KE FILE SAAT GAME OVER ===
+            # Simpan skor akhir pemain ke file data_skor.json secara otomatis
+            if pemain_aktif and not getattr(screens, '_skor_sudah_disimpan', False):
+                simpan_skor_pemain(pemain_aktif, skor_kuis_sesi, soal_benar_sesi, total_soal_sesi)
+                screens._skor_sudah_disimpan = True  # Tandai agar tidak tersimpan berulang kali
+
         elif game_state == "LEVEL_SUMMARY":
             if summary_timer > 0:
                 summary_timer -= 1

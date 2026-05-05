@@ -21,11 +21,37 @@ def get_level_data(level_number):
             "items": [
                 {"type": "Na", "x": 800, "y": 550, "fact_text": "Atom Na punya 1 elektron luar. Ia tidak sabar untuk 'membuang' 1 elektron agar stabil seperti Gas Mulia!"},
                 {"type": "Cl", "x": 3500, "y": 450, "fact_text": "Atom Cl punya 7 elektron luar. Dia sangat agresif 'merampas' 1 elektron dari unsur lain agar stabil seperti Gas Mulia!"},
+                # === 5 SOAL KUIS LEVEL 1: Tema Ikatan Ion ===
+                # Soal 1 - Awal level
+                {"type": "KUIS", "x": 1600, "y": 550,
+                 "question": "Apa yang dimaksud dengan Ikatan Ion?",
+                 "options": ["A. Berbagi elektron", "B. Serah-terima elektron", "C. Gabungan atom sejenis"],
+                 "correct_idx": 1,
+                 "explanation": "Ikatan Ion terjadi karena serah-terima elektron antara atom logam (melepas) dan non-logam (menerima)."},
+                # Soal 2 - Setelah platform pertama
+                {"type": "KUIS", "x": 2700, "y": 450,
+                 "question": "Ion Na+ terbentuk karena Na melepas berapa elektron?",
+                 "options": ["A. 2 elektron", "B. 1 elektron", "C. 3 elektron"],
+                 "correct_idx": 1,
+                 "explanation": "Na memiliki 1 elektron valensi. Dengan melepas 1 elektron, Na berubah menjadi ion positif Na+."},
+                # Soal 3 - Tengah level
+                {"type": "KUIS", "x": 4500, "y": 500,
+                 "question": "Ion Cl- terbentuk karena Cl menerima berapa elektron?",
+                 "options": ["A. 1 elektron", "B. 2 elektron", "C. 3 elektron"],
+                 "correct_idx": 0,
+                 "explanation": "Cl memiliki 7 elektron valensi. Dengan menerima 1 elektron, Cl menjadi ion negatif Cl- dan mencapai konfigurasi oktet."},
+                # Soal 4 - Menjelang akhir
                 {"type": "KUIS", "x": 5500, "y": 450,
                  "question": "Unsur Na (Golongan IA) agar stabil mencapai aturan Oktet, akan cenderung melakukan apa?",
                  "options": ["A. Melepas 1 elektron", "B. Menerima 1 elektron", "C. Membentuk ikatan kovalen"],
                  "correct_idx": 0,
                  "explanation": "Na memiliki elektron valensi 1. Energi ionisasinya rendah sehingga lebih mudah melepas 1 elektron menjadi ion Na+."},
+                # Soal 5 - Dekat altar
+                {"type": "KUIS", "x": 6800, "y": 450,
+                 "question": "Senyawa NaCl (garam dapur) termasuk jenis senyawa apa?",
+                 "options": ["A. Senyawa Kovalen", "B. Senyawa Ion", "C. Senyawa Logam"],
+                 "correct_idx": 1,
+                 "explanation": "NaCl terbentuk dari ikatan ion antara Na+ dan Cl-. Senyawa ion umumnya berbentuk kristal dan memiliki titik leleh tinggi."},
             ],
             "altar": {
                 "x": 7200, "y": 450,
@@ -59,11 +85,37 @@ def get_level_data(level_number):
                 {"type": "H", "x": 800, "y": 550, "fact_text": "Atom H butuh 1 elektron lagi (Duplet). Walaupun kecil, dia siap 'berbagi' elektron untuk berikatan Kovalen!"},
                 {"type": "O", "x": 2800, "y": 400, "fact_text": "Atom O butuh 2 elektron lagi (Oktet). Dia suka 'berbagi' dengan 2 atom H untuk membentuk Air!"},
                 {"type": "H", "x": 4800, "y": 500, "fact_text": "Atom H butuh 1 elektron lagi (Duplet). Walaupun kecil, dia siap 'berbagi' elektron untuk berikatan Kovalen!"},
-                {"type": "KUIS", "x": 6500, "y": 450,
+                # === 5 SOAL KUIS LEVEL 2: Tema Ikatan Kovalen ===
+                # Soal 1 - Awal level
+                {"type": "KUIS", "x": 1200, "y": 550,
+                 "question": "Apa yang membedakan Ikatan Kovalen dari Ikatan Ion?",
+                 "options": ["A. Serah-terima elektron", "B. Berbagi pasangan elektron", "C. Tidak melibatkan elektron"],
+                 "correct_idx": 1,
+                 "explanation": "Ikatan Kovalen terjadi karena PENGGUNAAN BERSAMA pasangan elektron antara dua atom non-logam."},
+                # Soal 2 - Platform kedua
+                {"type": "KUIS", "x": 2500, "y": 450,
+                 "question": "Berapa ikatan kovalen yang terbentuk antara O dan setiap atom H dalam H2O?",
+                 "options": ["A. 2 ikatan", "B. 3 ikatan", "C. 1 ikatan"],
+                 "correct_idx": 2,
+                 "explanation": "Setiap atom H berbagi 1 pasangan elektron dengan O, sehingga terbentuk 1 ikatan kovalen tunggal per atom H."},
+                # Soal 3 - Tengah level
+                {"type": "KUIS", "x": 4200, "y": 500,
                  "question": "Oksigen (O) memiliki 6 elektron valensi. Untuk stabil, ia akan...",
                  "options": ["A. Melepas 2 elektron", "B. Menerima 2 e- / Berbagi 2 e-", "C. Membentuk ion positif"],
                  "correct_idx": 1,
                  "explanation": "Oksigen (O) kurang 2 elektron untuk oktet. Ia cenderung menerima 2 elektron atau membentuk 2 ikatan kovalen."},
+                # Soal 4 - Menjelang altar
+                {"type": "KUIS", "x": 6000, "y": 450,
+                 "question": "Bentuk molekul H2O adalah...",
+                 "options": ["A. Lurus (linear)", "B. Segitiga datar", "C. Bengkok (V-shape)"],
+                 "correct_idx": 2,
+                 "explanation": "Dua Pasangan Elektron Bebas (PEB) pada O menolak ikatan O-H, sehingga molekul air berbentuk bengkok/V-shape."},
+                # Soal 5 - Dekat altar
+                {"type": "KUIS", "x": 7000, "y": 450,
+                 "question": "H2O disebut ikatan kovalen POLAR karena...",
+                 "options": ["A. Atom-atomnya sama", "B. Perbedaan keelektronegatifan O dan H", "C. Tidak memiliki PEB"],
+                 "correct_idx": 1,
+                 "explanation": "Oksigen jauh lebih elektronegatif dari Hidrogen, sehingga elektron lebih tertarik ke O, menciptakan ikatan kovalen polar."},
             ],
             "altar": {
                 "x": 7500, "y": 450,
@@ -105,12 +157,39 @@ def get_level_data(level_number):
                 {"type": "Proton", "x": 4500, "y": 500, "fact_text": "Tiga proton artinya ini adalah unsur Lithium (Li)!"},
                 {"type": "Neutron", "x": 5200, "y": 450, "fact_text": "Lithium-7 memiliki 3 Proton dan 4 Neutron."},
                 {"type": "Neutron", "x": 6500, "y": 350, "fact_text": "Massa atom (A) = jumlah Proton (Z) + jumlah Neutron (N)."},
-                {"type": "KUIS", "x": 8000, "y": 450,
+                # === 5 SOAL KUIS LEVEL 3: Tema Struktur Atom ===
+                # Soal 1 - Awal level
+                {"type": "KUIS", "x": 1000, "y": 550,
+                 "question": "Di bagian manakah Proton dan Neutron berada dalam atom?",
+                 "options": ["A. Kulit elektron", "B. Inti atom (nukleus)", "C. Orbital luar"],
+                 "correct_idx": 1,
+                 "explanation": "Proton dan Neutron terdapat di inti atom (nukleus). Elektron mengorbit di luar inti pada tingkat energi tertentu."},
+                # Soal 2 - Platform kedua
+                {"type": "KUIS", "x": 2900, "y": 450,
+                 "question": "Apa yang menentukan nomor atom (Z) suatu unsur?",
+                 "options": ["A. Jumlah Neutron", "B. Jumlah Proton", "C. Jumlah Elektron + Neutron"],
+                 "correct_idx": 1,
+                 "explanation": "Nomor atom (Z) = jumlah Proton. Setiap unsur memiliki jumlah proton yang unik dan khas."},
+                # Soal 3 - Tengah level
+                {"type": "KUIS", "x": 4700, "y": 500,
+                 "question": "Lithium (Li) memiliki nomor atom 3. Artinya Li memiliki berapa proton?",
+                 "options": ["A. 4 proton", "B. 7 proton", "C. 3 proton"],
+                 "correct_idx": 2,
+                 "explanation": "Nomor atom = jumlah proton. Li dengan nomor atom 3 berarti memiliki 3 proton di dalam intinya."},
+                # Soal 4 - Menjelang altar
+                {"type": "KUIS", "x": 6200, "y": 400,
                  "question": "Partikel subatomik apakah yang menentukan massa suatu atom?",
                  "options": ["A. Elektron", "B. Proton & Neutron", "C. Foton"],
                  "correct_idx": 1,
                  "explanation": "Sebagian besar massa atom terpusat di inti atom, yang terdiri dari Proton dan Neutron. Elektron massanya sangat kecil sehingga diabaikan."},
+                # Soal 5 - Dekat altar
+                {"type": "KUIS", "x": 8000, "y": 450,
+                 "question": "Lithium-7 memiliki nomor massa 7 dan nomor atom 3. Berapa jumlah neutronnya?",
+                 "options": ["A. 3 neutron", "B. 7 neutron", "C. 4 neutron"],
+                 "correct_idx": 2,
+                 "explanation": "Jumlah Neutron = Nomor Massa - Nomor Atom = 7 - 3 = 4 neutron. Itulah mengapa disebut Lithium-7."},
             ],
+
             "altar": {
                 "x": 9000, "y": 450,
                 "target_formula": {"Proton": 3, "Neutron": 4},

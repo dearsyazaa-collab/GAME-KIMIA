@@ -360,6 +360,82 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_threading_local.py',
    'PYMODULE'),
+  ('absl',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\__init__.py',
+   'PYMODULE'),
+  ('absl.app',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\app.py',
+   'PYMODULE'),
+  ('absl.command_name',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\command_name.py',
+   'PYMODULE'),
+  ('absl.flags',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\flags\\__init__.py',
+   'PYMODULE'),
+  ('absl.flags._argument_parser',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\flags\\_argument_parser.py',
+   'PYMODULE'),
+  ('absl.flags._defines',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\flags\\_defines.py',
+   'PYMODULE'),
+  ('absl.flags._exceptions',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\flags\\_exceptions.py',
+   'PYMODULE'),
+  ('absl.flags._flag',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\flags\\_flag.py',
+   'PYMODULE'),
+  ('absl.flags._flagvalues',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\flags\\_flagvalues.py',
+   'PYMODULE'),
+  ('absl.flags._helpers',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\flags\\_helpers.py',
+   'PYMODULE'),
+  ('absl.flags._validators',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\flags\\_validators.py',
+   'PYMODULE'),
+  ('absl.flags._validators_classes',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\flags\\_validators_classes.py',
+   'PYMODULE'),
+  ('absl.logging',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\logging\\__init__.py',
+   'PYMODULE'),
+  ('absl.logging.converter',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\logging\\converter.py',
+   'PYMODULE'),
+  ('absl.testing',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\testing\\__init__.py',
+   'PYMODULE'),
+  ('absl.testing._pretty_print_reporter',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\testing\\_pretty_print_reporter.py',
+   'PYMODULE'),
+  ('absl.testing.absltest',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\testing\\absltest.py',
+   'PYMODULE'),
+  ('absl.testing.parameterized',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\testing\\parameterized.py',
+   'PYMODULE'),
+  ('absl.testing.xml_reporter',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\absl\\testing\\xml_reporter.py',
+   'PYMODULE'),
   ('argparse',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\argparse.py',
@@ -555,6 +631,10 @@
   ('bz2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\bz2.py',
+   'PYMODULE'),
+  ('cProfile',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\cProfile.py',
    'PYMODULE'),
   ('calendar',
    'C:\\Users\\L E N O V '
@@ -919,6 +999,42 @@
   ('fileinput',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\fileinput.py',
+   'PYMODULE'),
+  ('flatbuffers',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\flatbuffers\\__init__.py',
+   'PYMODULE'),
+  ('flatbuffers._version',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\flatbuffers\\_version.py',
+   'PYMODULE'),
+  ('flatbuffers.builder',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\flatbuffers\\builder.py',
+   'PYMODULE'),
+  ('flatbuffers.compat',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\flatbuffers\\compat.py',
+   'PYMODULE'),
+  ('flatbuffers.encode',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\flatbuffers\\encode.py',
+   'PYMODULE'),
+  ('flatbuffers.number_types',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\flatbuffers\\number_types.py',
+   'PYMODULE'),
+  ('flatbuffers.packer',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\flatbuffers\\packer.py',
+   'PYMODULE'),
+  ('flatbuffers.table',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\flatbuffers\\table.py',
+   'PYMODULE'),
+  ('flatbuffers.util',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\flatbuffers\\util.py',
    'PYMODULE'),
   ('fnmatch',
    'C:\\Users\\L E N O V '
@@ -1615,13 +1731,53 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\__init__.py',
    'PYMODULE'),
+  ('mediapipe.calculators.audio',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\audio\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.audio.mfcc_mel_calculators_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\audio\\mfcc_mel_calculators_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.audio.rational_factor_resample_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\audio\\rational_factor_resample_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.audio.spectrogram_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\audio\\spectrogram_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.audio.stabilized_log_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\audio\\stabilized_log_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.audio.time_series_framer_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\audio\\time_series_framer_calculator_pb2.py',
+   'PYMODULE'),
   ('mediapipe.calculators.core',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\core\\__init__.py',
    'PYMODULE'),
+  ('mediapipe.calculators.core.bypass_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\core\\bypass_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.core.clip_vector_size_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\core\\clip_vector_size_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.core.concatenate_vector_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\core\\concatenate_vector_calculator_pb2.py',
+   'PYMODULE'),
   ('mediapipe.calculators.core.constant_side_packet_calculator_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\core\\constant_side_packet_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.core.dequantize_byte_array_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\core\\dequantize_byte_array_calculator_pb2.py',
    'PYMODULE'),
   ('mediapipe.calculators.core.flow_limiter_calculator_pb2',
    'C:\\Users\\L E N O V '
@@ -1631,6 +1787,34 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\core\\gate_calculator_pb2.py',
    'PYMODULE'),
+  ('mediapipe.calculators.core.get_vector_item_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\core\\get_vector_item_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.core.graph_profile_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\core\\graph_profile_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.core.packet_cloner_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\core\\packet_cloner_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.core.packet_resampler_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\core\\packet_resampler_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.core.packet_thinner_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\core\\packet_thinner_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.core.quantize_float_vector_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\core\\quantize_float_vector_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.core.sequence_shift_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\core\\sequence_shift_calculator_pb2.py',
+   'PYMODULE'),
   ('mediapipe.calculators.core.split_vector_calculator_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\core\\split_vector_calculator_pb2.py',
@@ -1639,21 +1823,85 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\image\\__init__.py',
    'PYMODULE'),
+  ('mediapipe.calculators.image.bilateral_filter_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\image\\bilateral_filter_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.image.feature_detector_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\image\\feature_detector_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.image.image_clone_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\image\\image_clone_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.image.image_cropping_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\image\\image_cropping_calculator_pb2.py',
+   'PYMODULE'),
   ('mediapipe.calculators.image.image_transformation_calculator_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\image\\image_transformation_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.image.mask_overlay_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\image\\mask_overlay_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.image.opencv_encoded_image_to_image_frame_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\image\\opencv_encoded_image_to_image_frame_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.image.opencv_image_encoder_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\image\\opencv_image_encoder_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.image.recolor_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\image\\recolor_calculator_pb2.py',
    'PYMODULE'),
   ('mediapipe.calculators.image.rotation_mode_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\image\\rotation_mode_pb2.py',
    'PYMODULE'),
+  ('mediapipe.calculators.image.scale_image_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\image\\scale_image_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.image.segmentation_smoothing_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\image\\segmentation_smoothing_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.image.set_alpha_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\image\\set_alpha_calculator_pb2.py',
+   'PYMODULE'),
   ('mediapipe.calculators.image.warp_affine_calculator_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\image\\warp_affine_calculator_pb2.py',
    'PYMODULE'),
+  ('mediapipe.calculators.internal',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\internal\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.internal.callback_packet_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\internal\\callback_packet_calculator_pb2.py',
+   'PYMODULE'),
   ('mediapipe.calculators.tensor',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tensor\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.tensor.audio_to_tensor_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tensor\\audio_to_tensor_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.tensor.bert_preprocessor_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tensor\\bert_preprocessor_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.tensor.feedback_tensors_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tensor\\feedback_tensors_calculator_pb2.py',
    'PYMODULE'),
   ('mediapipe.calculators.tensor.image_to_tensor_calculator_pb2',
    'C:\\Users\\L E N O V '
@@ -1662,6 +1910,30 @@
   ('mediapipe.calculators.tensor.inference_calculator_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tensor\\inference_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.tensor.landmarks_to_tensor_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tensor\\landmarks_to_tensor_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.tensor.regex_preprocessor_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tensor\\regex_preprocessor_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.tensor.tensor_converter_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tensor\\tensor_converter_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.tensor.tensor_to_joints_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tensor\\tensor_to_joints_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.tensor.tensors_readback_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tensor\\tensors_readback_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.tensor.tensors_to_audio_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tensor\\tensors_to_audio_calculator_pb2.py',
    'PYMODULE'),
   ('mediapipe.calculators.tensor.tensors_to_classification_calculator_pb2',
    'C:\\Users\\L E N O V '
@@ -1691,9 +1963,45 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tflite\\ssd_anchors_calculator_pb2.py',
    'PYMODULE'),
+  ('mediapipe.calculators.tflite.tflite_converter_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tflite\\tflite_converter_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.tflite.tflite_custom_op_resolver_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tflite\\tflite_custom_op_resolver_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.tflite.tflite_inference_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tflite\\tflite_inference_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.tflite.tflite_tensors_to_classification_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tflite\\tflite_tensors_to_classification_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.tflite.tflite_tensors_to_detections_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tflite\\tflite_tensors_to_detections_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.tflite.tflite_tensors_to_landmarks_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tflite\\tflite_tensors_to_landmarks_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.tflite.tflite_tensors_to_segmentation_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\tflite\\tflite_tensors_to_segmentation_calculator_pb2.py',
+   'PYMODULE'),
   ('mediapipe.calculators.util',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.align_hand_to_pose_in_world_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\align_hand_to_pose_in_world_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.annotation_overlay_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\annotation_overlay_calculator_pb2.py',
    'PYMODULE'),
   ('mediapipe.calculators.util.association_calculator_pb2',
    'C:\\Users\\L E N O V '
@@ -1703,6 +2011,10 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\collection_has_min_size_calculator_pb2.py',
    'PYMODULE'),
+  ('mediapipe.calculators.util.combine_joints_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\combine_joints_calculator_pb2.py',
+   'PYMODULE'),
   ('mediapipe.calculators.util.detection_label_id_to_text_calculator_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\detection_label_id_to_text_calculator_pb2.py',
@@ -1710,6 +2022,26 @@
   ('mediapipe.calculators.util.detections_to_rects_calculator_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\detections_to_rects_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.detections_to_render_data_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\detections_to_render_data_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.face_to_rect_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\face_to_rect_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.filter_detections_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\filter_detections_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.flat_color_image_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\flat_color_image_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.labels_to_render_data_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\labels_to_render_data_calculator_pb2.py',
    'PYMODULE'),
   ('mediapipe.calculators.util.landmark_projection_calculator_pb2',
    'C:\\Users\\L E N O V '
@@ -1723,6 +2055,26 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\landmarks_smoothing_calculator_pb2.py',
    'PYMODULE'),
+  ('mediapipe.calculators.util.landmarks_to_detection_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\landmarks_to_detection_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.landmarks_to_floats_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\landmarks_to_floats_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.landmarks_to_render_data_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\landmarks_to_render_data_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.landmarks_transformation_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\landmarks_transformation_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.latency_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\latency_pb2.py',
+   'PYMODULE'),
   ('mediapipe.calculators.util.local_file_contents_calculator_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\local_file_contents_calculator_pb2.py',
@@ -1735,17 +2087,113 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\non_max_suppression_calculator_pb2.py',
    'PYMODULE'),
+  ('mediapipe.calculators.util.packet_frequency_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\packet_frequency_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.packet_frequency_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\packet_frequency_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.packet_latency_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\packet_latency_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.rect_to_render_data_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\rect_to_render_data_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.rect_to_render_scale_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\rect_to_render_scale_calculator_pb2.py',
+   'PYMODULE'),
   ('mediapipe.calculators.util.rect_transformation_calculator_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\rect_transformation_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.refine_landmarks_from_heatmap_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\refine_landmarks_from_heatmap_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.set_joints_visibility_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\set_joints_visibility_calculator_pb2.py',
    'PYMODULE'),
   ('mediapipe.calculators.util.thresholding_calculator_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\thresholding_calculator_pb2.py',
    'PYMODULE'),
+  ('mediapipe.calculators.util.timed_box_list_id_to_label_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\timed_box_list_id_to_label_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.timed_box_list_to_render_data_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\timed_box_list_to_render_data_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.top_k_scores_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\top_k_scores_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.util.visibility_copy_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\visibility_copy_calculator_pb2.py',
+   'PYMODULE'),
   ('mediapipe.calculators.util.visibility_smoothing_calculator_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\util\\visibility_smoothing_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.video',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\video\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.video.box_detector_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\video\\box_detector_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.video.box_tracker_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\video\\box_tracker_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.video.flow_packager_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\video\\flow_packager_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.video.flow_to_image_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\video\\flow_to_image_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.video.motion_analysis_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\video\\motion_analysis_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.video.opencv_video_encoder_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\video\\opencv_video_encoder_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.video.tool',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\video\\tool\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.video.tool.flow_quantizer_model_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\video\\tool\\flow_quantizer_model_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.video.tracked_detection_manager_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\video\\tracked_detection_manager_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.calculators.video.video_pre_stream_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\calculators\\video\\video_pre_stream_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.examples',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\examples\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.examples.desktop',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\examples\\desktop\\__init__.py',
    'PYMODULE'),
   ('mediapipe.framework',
    'C:\\Users\\L E N O V '
@@ -1759,13 +2207,33 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\calculator_pb2.py',
    'PYMODULE'),
+  ('mediapipe.framework.calculator_profile_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\calculator_profile_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.framework.deps',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\deps\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.framework.deps.proto_descriptor_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\deps\\proto_descriptor_pb2.py',
+   'PYMODULE'),
   ('mediapipe.framework.formats',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\formats\\__init__.py',
    'PYMODULE'),
+  ('mediapipe.framework.formats.affine_transform_data_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\formats\\affine_transform_data_pb2.py',
+   'PYMODULE'),
   ('mediapipe.framework.formats.annotation',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\formats\\annotation\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.framework.formats.annotation.locus_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\formats\\annotation\\locus_pb2.py',
    'PYMODULE'),
   ('mediapipe.framework.formats.annotation.rasterization_pb2',
    'C:\\Users\\L E N O V '
@@ -1783,6 +2251,14 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\formats\\detection_pb2.py',
    'PYMODULE'),
+  ('mediapipe.framework.formats.image_file_properties_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\formats\\image_file_properties_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.framework.formats.image_format_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\formats\\image_format_pb2.py',
+   'PYMODULE'),
   ('mediapipe.framework.formats.landmark_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\formats\\landmark_pb2.py',
@@ -1794,6 +2270,14 @@
   ('mediapipe.framework.formats.matrix_data_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\formats\\matrix_data_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.framework.formats.motion',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\formats\\motion\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.framework.formats.motion.optical_flow_field_data_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\formats\\motion\\optical_flow_field_data_pb2.py',
    'PYMODULE'),
   ('mediapipe.framework.formats.object_detection',
    'C:\\Users\\L E N O V '
@@ -1827,13 +2311,61 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\status_handler_pb2.py',
    'PYMODULE'),
+  ('mediapipe.framework.stream_handler',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\stream_handler\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.framework.stream_handler.default_input_stream_handler_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\stream_handler\\default_input_stream_handler_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.framework.stream_handler.fixed_size_input_stream_handler_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\stream_handler\\fixed_size_input_stream_handler_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.framework.stream_handler.sync_set_input_stream_handler_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\stream_handler\\sync_set_input_stream_handler_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.framework.stream_handler.timestamp_align_input_stream_handler_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\stream_handler\\timestamp_align_input_stream_handler_pb2.py',
+   'PYMODULE'),
   ('mediapipe.framework.stream_handler_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\stream_handler_pb2.py',
    'PYMODULE'),
+  ('mediapipe.framework.test_calculators_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\test_calculators_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.framework.thread_pool_executor_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\thread_pool_executor_pb2.py',
+   'PYMODULE'),
   ('mediapipe.framework.tool',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\tool\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.framework.tool.calculator_graph_template_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\tool\\calculator_graph_template_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.framework.tool.field_data_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\tool\\field_data_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.framework.tool.node_chain_subgraph_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\tool\\node_chain_subgraph_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.framework.tool.packet_generator_wrapper_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\tool\\packet_generator_wrapper_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.framework.tool.source_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\framework\\tool\\source_pb2.py',
    'PYMODULE'),
   ('mediapipe.framework.tool.switch_container_pb2',
    'C:\\Users\\L E N O V '
@@ -1842,6 +2374,26 @@
   ('mediapipe.gpu',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\gpu\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.gpu.copy_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\gpu\\copy_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.gpu.gl_animation_overlay_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\gpu\\gl_animation_overlay_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.gpu.gl_context_options_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\gpu\\gl_context_options_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.gpu.gl_scaler_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\gpu\\gl_scaler_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.gpu.gl_surface_sink_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\gpu\\gl_surface_sink_calculator_pb2.py',
    'PYMODULE'),
   ('mediapipe.gpu.gpu_origin_pb2',
    'C:\\Users\\L E N O V '
@@ -1863,6 +2415,62 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\face_detection\\face_detection_pb2.py',
    'PYMODULE'),
+  ('mediapipe.modules.face_geometry',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\face_geometry\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.modules.face_geometry.data',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\face_geometry\\data\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.modules.face_geometry.effect_renderer_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\face_geometry\\effect_renderer_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.modules.face_geometry.env_generator_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\face_geometry\\env_generator_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.modules.face_geometry.geometry_pipeline_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\face_geometry\\geometry_pipeline_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.modules.face_geometry.libs',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\face_geometry\\libs\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.modules.face_geometry.protos',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\face_geometry\\protos\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.modules.face_geometry.protos.environment_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\face_geometry\\protos\\environment_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.modules.face_geometry.protos.face_geometry_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\face_geometry\\protos\\face_geometry_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.modules.face_geometry.protos.geometry_pipeline_metadata_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\face_geometry\\protos\\geometry_pipeline_metadata_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.modules.face_geometry.protos.mesh_3d_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\face_geometry\\protos\\mesh_3d_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.modules.face_landmark',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\face_landmark\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.modules.hand_landmark',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\hand_landmark\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.modules.hand_landmark.calculators',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\hand_landmark\\calculators\\__init__.py',
+   'PYMODULE'),
   ('mediapipe.modules.holistic_landmark',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\holistic_landmark\\__init__.py',
@@ -1874,6 +2482,10 @@
   ('mediapipe.modules.holistic_landmark.calculators.roi_tracking_calculator_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\holistic_landmark\\calculators\\roi_tracking_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.modules.iris_landmark',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\iris_landmark\\__init__.py',
    'PYMODULE'),
   ('mediapipe.modules.objectron',
    'C:\\Users\\L E N O V '
@@ -1895,9 +2507,21 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\objectron\\calculators\\belief_decoder_config_pb2.py',
    'PYMODULE'),
+  ('mediapipe.modules.objectron.calculators.camera_parameters_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\objectron\\calculators\\camera_parameters_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.modules.objectron.calculators.filter_detection_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\objectron\\calculators\\filter_detection_calculator_pb2.py',
+   'PYMODULE'),
   ('mediapipe.modules.objectron.calculators.frame_annotation_to_rect_calculator_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\objectron\\calculators\\frame_annotation_to_rect_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.modules.objectron.calculators.frame_annotation_tracker_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\objectron\\calculators\\frame_annotation_tracker_calculator_pb2.py',
    'PYMODULE'),
   ('mediapipe.modules.objectron.calculators.lift_2d_frame_annotation_to_3d_calculator_pb2',
    'C:\\Users\\L E N O V '
@@ -1907,9 +2531,45 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\objectron\\calculators\\object_pb2.py',
    'PYMODULE'),
+  ('mediapipe.modules.objectron.calculators.tensors_to_objects_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\objectron\\calculators\\tensors_to_objects_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.modules.objectron.calculators.tflite_tensors_to_objects_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\objectron\\calculators\\tflite_tensors_to_objects_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.modules.palm_detection',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\palm_detection\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.modules.pose_detection',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\pose_detection\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.modules.pose_landmark',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\pose_landmark\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.modules.selfie_segmentation',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\modules\\selfie_segmentation\\__init__.py',
+   'PYMODULE'),
   ('mediapipe.python',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.python.calculator_graph_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\calculator_graph_test.py',
+   'PYMODULE'),
+  ('mediapipe.python.image_frame_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\image_frame_test.py',
+   'PYMODULE'),
+  ('mediapipe.python.image_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\image_test.py',
    'PYMODULE'),
   ('mediapipe.python.packet_creator',
    'C:\\Users\\L E N O V '
@@ -1919,9 +2579,17 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\packet_getter.py',
    'PYMODULE'),
+  ('mediapipe.python.packet_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\packet_test.py',
+   'PYMODULE'),
   ('mediapipe.python.solution_base',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solution_base.py',
+   'PYMODULE'),
+  ('mediapipe.python.solution_base_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solution_base_test.py',
    'PYMODULE'),
   ('mediapipe.python.solutions',
    'C:\\Users\\L E N O V '
@@ -1939,9 +2607,17 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solutions\\drawing_utils.py',
    'PYMODULE'),
+  ('mediapipe.python.solutions.drawing_utils_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solutions\\drawing_utils_test.py',
+   'PYMODULE'),
   ('mediapipe.python.solutions.face_detection',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solutions\\face_detection.py',
+   'PYMODULE'),
+  ('mediapipe.python.solutions.face_detection_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solutions\\face_detection_test.py',
    'PYMODULE'),
   ('mediapipe.python.solutions.face_mesh',
    'C:\\Users\\L E N O V '
@@ -1951,6 +2627,10 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solutions\\face_mesh_connections.py',
    'PYMODULE'),
+  ('mediapipe.python.solutions.face_mesh_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solutions\\face_mesh_test.py',
+   'PYMODULE'),
   ('mediapipe.python.solutions.hands',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solutions\\hands.py',
@@ -1959,13 +2639,25 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solutions\\hands_connections.py',
    'PYMODULE'),
+  ('mediapipe.python.solutions.hands_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solutions\\hands_test.py',
+   'PYMODULE'),
   ('mediapipe.python.solutions.holistic',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solutions\\holistic.py',
    'PYMODULE'),
+  ('mediapipe.python.solutions.holistic_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solutions\\holistic_test.py',
+   'PYMODULE'),
   ('mediapipe.python.solutions.objectron',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solutions\\objectron.py',
+   'PYMODULE'),
+  ('mediapipe.python.solutions.objectron_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solutions\\objectron_test.py',
    'PYMODULE'),
   ('mediapipe.python.solutions.pose',
    'C:\\Users\\L E N O V '
@@ -1975,9 +2667,21 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solutions\\pose_connections.py',
    'PYMODULE'),
+  ('mediapipe.python.solutions.pose_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solutions\\pose_test.py',
+   'PYMODULE'),
   ('mediapipe.python.solutions.selfie_segmentation',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solutions\\selfie_segmentation.py',
+   'PYMODULE'),
+  ('mediapipe.python.solutions.selfie_segmentation_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\solutions\\selfie_segmentation_test.py',
+   'PYMODULE'),
+  ('mediapipe.python.timestamp_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\python\\timestamp_test.py',
    'PYMODULE'),
   ('mediapipe.tasks',
    'C:\\Users\\L E N O V '
@@ -2015,9 +2719,33 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\audio\\audio_embedder\\proto\\audio_embedder_graph_options_pb2.py',
    'PYMODULE'),
+  ('mediapipe.tasks.cc.audio.core',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\audio\\core\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.audio.utils',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\audio\\utils\\__init__.py',
+   'PYMODULE'),
   ('mediapipe.tasks.cc.components',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.components.calculators',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\calculators\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.components.calculators.classification_aggregation_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\calculators\\classification_aggregation_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.components.calculators.score_calibration_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\calculators\\score_calibration_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.components.calculators.tensors_to_embeddings_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\calculators\\tensors_to_embeddings_calculator_pb2.py',
    'PYMODULE'),
   ('mediapipe.tasks.cc.components.containers',
    'C:\\Users\\L E N O V '
@@ -2047,13 +2775,53 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\processors\\proto\\__init__.py',
    'PYMODULE'),
+  ('mediapipe.tasks.cc.components.processors.proto.classification_postprocessing_graph_options_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\processors\\proto\\classification_postprocessing_graph_options_pb2.py',
+   'PYMODULE'),
   ('mediapipe.tasks.cc.components.processors.proto.classifier_options_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\processors\\proto\\classifier_options_pb2.py',
    'PYMODULE'),
+  ('mediapipe.tasks.cc.components.processors.proto.detection_postprocessing_graph_options_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\processors\\proto\\detection_postprocessing_graph_options_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.components.processors.proto.detector_options_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\processors\\proto\\detector_options_pb2.py',
+   'PYMODULE'),
   ('mediapipe.tasks.cc.components.processors.proto.embedder_options_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\processors\\proto\\embedder_options_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.components.processors.proto.embedding_postprocessing_graph_options_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\processors\\proto\\embedding_postprocessing_graph_options_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.components.processors.proto.image_preprocessing_graph_options_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\processors\\proto\\image_preprocessing_graph_options_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.components.processors.proto.llm_params_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\processors\\proto\\llm_params_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.components.processors.proto.text_model_type_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\processors\\proto\\text_model_type_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.components.processors.proto.text_preprocessing_graph_options_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\processors\\proto\\text_preprocessing_graph_options_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.components.processors.proto.transformer_params_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\processors\\proto\\transformer_params_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.components.utils',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\components\\utils\\__init__.py',
    'PYMODULE'),
   ('mediapipe.tasks.cc.core',
    'C:\\Users\\L E N O V '
@@ -2075,9 +2843,69 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\core\\proto\\external_file_pb2.py',
    'PYMODULE'),
+  ('mediapipe.tasks.cc.core.proto.inference_subgraph_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\core\\proto\\inference_subgraph_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.core.proto.model_resources_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\core\\proto\\model_resources_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.metadata',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\metadata\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.metadata.python',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\metadata\\python\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.metadata.tests',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\metadata\\tests\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.metadata.utils',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\metadata\\utils\\__init__.py',
+   'PYMODULE'),
   ('mediapipe.tasks.cc.text',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\text\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.text.custom_ops',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\text\\custom_ops\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.text.custom_ops.ragged',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\text\\custom_ops\\ragged\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.text.custom_ops.sentencepiece',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\text\\custom_ops\\sentencepiece\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.text.custom_ops.sentencepiece.testdata',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\text\\custom_ops\\sentencepiece\\testdata\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.text.language_detector',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\text\\language_detector\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.text.language_detector.custom_ops',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\text\\language_detector\\custom_ops\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.text.language_detector.custom_ops.utils',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\text\\language_detector\\custom_ops\\utils\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.text.language_detector.custom_ops.utils.hash',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\text\\language_detector\\custom_ops\\utils\\hash\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.text.language_detector.custom_ops.utils.utf',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\text\\language_detector\\custom_ops\\utils\\utf\\__init__.py',
    'PYMODULE'),
   ('mediapipe.tasks.cc.text.text_classifier',
    'C:\\Users\\L E N O V '
@@ -2103,9 +2931,25 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\text\\text_embedder\\proto\\text_embedder_graph_options_pb2.py',
    'PYMODULE'),
+  ('mediapipe.tasks.cc.text.tokenizers',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\text\\tokenizers\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.text.utils',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\text\\utils\\__init__.py',
+   'PYMODULE'),
   ('mediapipe.tasks.cc.vision',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.core',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\core\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.custom_ops',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\custom_ops\\__init__.py',
    'PYMODULE'),
   ('mediapipe.tasks.cc.vision.face_detector',
    'C:\\Users\\L E N O V '
@@ -2127,13 +2971,29 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\face_geometry\\calculators\\__init__.py',
    'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.face_geometry.calculators.env_generator_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\face_geometry\\calculators\\env_generator_calculator_pb2.py',
+   'PYMODULE'),
   ('mediapipe.tasks.cc.vision.face_geometry.calculators.geometry_pipeline_calculator_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\face_geometry\\calculators\\geometry_pipeline_calculator_pb2.py',
    'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.face_geometry.data',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\face_geometry\\data\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.face_geometry.libs',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\face_geometry\\libs\\__init__.py',
+   'PYMODULE'),
   ('mediapipe.tasks.cc.vision.face_geometry.proto',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\face_geometry\\proto\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.face_geometry.proto.environment_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\face_geometry\\proto\\environment_pb2.py',
    'PYMODULE'),
   ('mediapipe.tasks.cc.vision.face_geometry.proto.face_geometry_graph_options_pb2',
    'C:\\Users\\L E N O V '
@@ -2142,6 +3002,10 @@
   ('mediapipe.tasks.cc.vision.face_geometry.proto.face_geometry_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\face_geometry\\proto\\face_geometry_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.face_geometry.proto.geometry_pipeline_metadata_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\face_geometry\\proto\\geometry_pipeline_metadata_pb2.py',
    'PYMODULE'),
   ('mediapipe.tasks.cc.vision.face_geometry.proto.mesh_3d_pb2',
    'C:\\Users\\L E N O V '
@@ -2167,9 +3031,21 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\face_landmarker\\proto\\face_landmarks_detector_graph_options_pb2.py',
    'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.face_landmarker.proto.tensors_to_face_landmarks_graph_options_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\face_landmarker\\proto\\tensors_to_face_landmarks_graph_options_pb2.py',
+   'PYMODULE'),
   ('mediapipe.tasks.cc.vision.face_stylizer',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\face_stylizer\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.face_stylizer.calculators',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\face_stylizer\\calculators\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.face_stylizer.calculators.tensors_to_image_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\face_stylizer\\calculators\\tensors_to_image_calculator_pb2.py',
    'PYMODULE'),
   ('mediapipe.tasks.cc.vision.face_stylizer.proto',
    'C:\\Users\\L E N O V '
@@ -2182,6 +3058,18 @@
   ('mediapipe.tasks.cc.vision.gesture_recognizer',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\gesture_recognizer\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.gesture_recognizer.calculators',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\gesture_recognizer\\calculators\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.gesture_recognizer.calculators.combined_prediction_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\gesture_recognizer\\calculators\\combined_prediction_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.gesture_recognizer.calculators.landmarks_to_matrix_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\gesture_recognizer\\calculators\\landmarks_to_matrix_calculator_pb2.py',
    'PYMODULE'),
   ('mediapipe.tasks.cc.vision.gesture_recognizer.proto',
    'C:\\Users\\L E N O V '
@@ -2215,9 +3103,21 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\hand_detector\\proto\\hand_detector_graph_options_pb2.py',
    'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.hand_detector.proto.hand_detector_result_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\hand_detector\\proto\\hand_detector_result_pb2.py',
+   'PYMODULE'),
   ('mediapipe.tasks.cc.vision.hand_landmarker',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\hand_landmarker\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.hand_landmarker.calculators',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\hand_landmarker\\calculators\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.hand_landmarker.calculators.hand_association_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\hand_landmarker\\calculators\\hand_association_calculator_pb2.py',
    'PYMODULE'),
   ('mediapipe.tasks.cc.vision.hand_landmarker.proto',
    'C:\\Users\\L E N O V '
@@ -2230,6 +3130,10 @@
   ('mediapipe.tasks.cc.vision.hand_landmarker.proto.hand_landmarks_detector_graph_options_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\hand_landmarker\\proto\\hand_landmarks_detector_graph_options_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.hand_landmarker.proto.hand_roi_refinement_graph_options_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\hand_landmarker\\proto\\hand_roi_refinement_graph_options_pb2.py',
    'PYMODULE'),
   ('mediapipe.tasks.cc.vision.image_classifier',
    'C:\\Users\\L E N O V '
@@ -2255,6 +3159,34 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\image_embedder\\proto\\image_embedder_graph_options_pb2.py',
    'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.image_generator',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\image_generator\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.image_generator.diffuser',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\image_generator\\diffuser\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.image_generator.diffuser.stable_diffusion_iterate_calculator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\image_generator\\diffuser\\stable_diffusion_iterate_calculator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.image_generator.proto',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\image_generator\\proto\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.image_generator.proto.conditioned_image_graph_options_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\image_generator\\proto\\conditioned_image_graph_options_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.image_generator.proto.control_plugin_graph_options_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\image_generator\\proto\\control_plugin_graph_options_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.image_generator.proto.image_generator_graph_options_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\image_generator\\proto\\image_generator_graph_options_pb2.py',
+   'PYMODULE'),
   ('mediapipe.tasks.cc.vision.image_segmenter',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\image_segmenter\\__init__.py',
@@ -2278,6 +3210,10 @@
   ('mediapipe.tasks.cc.vision.image_segmenter.proto.segmenter_options_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\image_segmenter\\proto\\segmenter_options_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.interactive_segmenter',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\interactive_segmenter\\__init__.py',
    'PYMODULE'),
   ('mediapipe.tasks.cc.vision.object_detector',
    'C:\\Users\\L E N O V '
@@ -2318,6 +3254,31 @@
   ('mediapipe.tasks.cc.vision.pose_landmarker.proto.pose_landmarks_detector_graph_options_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\pose_landmarker\\proto\\pose_landmarks_detector_graph_options_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.utils',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\utils\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.cc.vision.utils.ghum',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\cc\\vision\\utils\\ghum\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.metadata', '-', 'PYMODULE'),
+  ('mediapipe.tasks.metadata.image_segmenter_metadata_schema_py_generated',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\metadata\\image_segmenter_metadata_schema_py_generated.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.metadata.metadata_schema_py_generated',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\metadata\\metadata_schema_py_generated.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.metadata.object_detector_metadata_schema_py_generated',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\metadata\\object_detector_metadata_schema_py_generated.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.metadata.schema_py_generated',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\metadata\\schema_py_generated.py',
    'PYMODULE'),
   ('mediapipe.tasks.python',
    'C:\\Users\\L E N O V '
@@ -2431,6 +3392,143 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\core\\task_info.py',
    'PYMODULE'),
+  ('mediapipe.tasks.python.metadata',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\metadata\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.metadata.flatbuffers_lib', '-', 'PYMODULE'),
+  ('mediapipe.tasks.python.metadata.metadata',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\metadata\\metadata.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.metadata.metadata_displayer_cli',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\metadata\\metadata_displayer_cli.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.metadata.metadata_writers',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\metadata\\metadata_writers\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.metadata.metadata_writers.face_stylizer',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\metadata\\metadata_writers\\face_stylizer.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.metadata.metadata_writers.image_classifier',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\metadata\\metadata_writers\\image_classifier.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.metadata.metadata_writers.image_segmenter',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\metadata\\metadata_writers\\image_segmenter.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.metadata.metadata_writers.metadata_info',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\metadata\\metadata_writers\\metadata_info.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.metadata.metadata_writers.metadata_writer',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\metadata\\metadata_writers\\metadata_writer.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.metadata.metadata_writers.model_asset_bundle_utils',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\metadata\\metadata_writers\\model_asset_bundle_utils.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.metadata.metadata_writers.object_detector',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\metadata\\metadata_writers\\object_detector.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.metadata.metadata_writers.text_classifier',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\metadata\\metadata_writers\\text_classifier.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.metadata.metadata_writers.writer_utils',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\metadata\\metadata_writers\\writer_utils.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.audio',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\audio\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.audio.audio_classifier_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\audio\\audio_classifier_test.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.audio.audio_embedder_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\audio\\audio_embedder_test.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.test_utils',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\test_utils.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.text',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\text\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.text.language_detector_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\text\\language_detector_test.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.text.text_classifier_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\text\\text_classifier_test.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.text.text_embedder_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\text\\text_embedder_test.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.vision',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\vision\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.vision.face_aligner_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\vision\\face_aligner_test.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.vision.face_detector_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\vision\\face_detector_test.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.vision.face_landmarker_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\vision\\face_landmarker_test.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.vision.face_stylizer_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\vision\\face_stylizer_test.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.vision.hand_landmarker_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\vision\\hand_landmarker_test.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.vision.image_classifier_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\vision\\image_classifier_test.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.vision.image_embedder_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\vision\\image_embedder_test.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.vision.image_segmenter_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\vision\\image_segmenter_test.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.vision.interactive_segmenter_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\vision\\interactive_segmenter_test.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.vision.object_detector_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\vision\\object_detector_test.py',
+   'PYMODULE'),
+  ('mediapipe.tasks.python.test.vision.pose_landmarker_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\test\\vision\\pose_landmarker_test.py',
+   'PYMODULE'),
   ('mediapipe.tasks.python.text',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\tasks\\python\\text\\__init__.py',
@@ -2527,6 +3625,22 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\__init__.py',
    'PYMODULE'),
+  ('mediapipe.util.analytics',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\analytics\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.util.analytics.mediapipe_log_extension_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\analytics\\mediapipe_log_extension_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.analytics.mediapipe_logging_enums_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\analytics\\mediapipe_logging_enums_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.audio_decoder_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\audio_decoder_pb2.py',
+   'PYMODULE'),
   ('mediapipe.util.color_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\color_pb2.py',
@@ -2538,6 +3652,98 @@
   ('mediapipe.util.render_data_pb2',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\render_data_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.sequence',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\sequence\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.util.sequence.media_sequence',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\sequence\\media_sequence.py',
+   'PYMODULE'),
+  ('mediapipe.util.sequence.media_sequence_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\sequence\\media_sequence_test.py',
+   'PYMODULE'),
+  ('mediapipe.util.sequence.media_sequence_util',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\sequence\\media_sequence_util.py',
+   'PYMODULE'),
+  ('mediapipe.util.sequence.media_sequence_util_test',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\sequence\\media_sequence_util_test.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\__init__.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking.box_detector_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\box_detector_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking.box_tracker_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\box_tracker_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking.camera_motion_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\camera_motion_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking.flow_packager_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\flow_packager_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking.frame_selection_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\frame_selection_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking.frame_selection_solution_evaluator_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\frame_selection_solution_evaluator_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking.motion_analysis_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\motion_analysis_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking.motion_estimation_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\motion_estimation_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking.motion_models_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\motion_models_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking.motion_saliency_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\motion_saliency_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking.push_pull_filtering_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\push_pull_filtering_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking.region_flow_computation_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\region_flow_computation_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking.region_flow_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\region_flow_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking.tone_estimation_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\tone_estimation_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking.tone_models_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\tone_models_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking.tracked_detection_manager_config_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\tracked_detection_manager_config_pb2.py',
+   'PYMODULE'),
+  ('mediapipe.util.tracking.tracking_pb2',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\mediapipe\\util\\tracking\\tracking_pb2.py',
    'PYMODULE'),
   ('mimetypes',
    'C:\\Users\\L E N O V '
@@ -3509,6 +4715,14 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\pprint.py',
    'PYMODULE'),
+  ('profile',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\profile.py',
+   'PYMODULE'),
+  ('pstats',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\pstats.py',
+   'PYMODULE'),
   ('py_compile',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\py_compile.py',
@@ -3717,6 +4931,10 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\threading.py',
    'PYMODULE'),
+  ('timeit',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\timeit.py',
+   'PYMODULE'),
   ('tkinter',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tkinter\\__init__.py',
@@ -3809,6 +5027,10 @@
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\unittest\\main.py',
    'PYMODULE'),
+  ('unittest.mock',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\unittest\\mock.py',
+   'PYMODULE'),
   ('unittest.result',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\unittest\\result.py',
@@ -3864,6 +5086,38 @@
   ('xml',
    'C:\\Users\\L E N O V '
    'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\xml\\__init__.py',
+   'PYMODULE'),
+  ('xml.dom',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\xml\\dom\\__init__.py',
+   'PYMODULE'),
+  ('xml.dom.NodeFilter',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\xml\\dom\\NodeFilter.py',
+   'PYMODULE'),
+  ('xml.dom.domreg',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\xml\\dom\\domreg.py',
+   'PYMODULE'),
+  ('xml.dom.expatbuilder',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\xml\\dom\\expatbuilder.py',
+   'PYMODULE'),
+  ('xml.dom.minicompat',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\xml\\dom\\minicompat.py',
+   'PYMODULE'),
+  ('xml.dom.minidom',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\xml\\dom\\minidom.py',
+   'PYMODULE'),
+  ('xml.dom.pulldom',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\xml\\dom\\pulldom.py',
+   'PYMODULE'),
+  ('xml.dom.xmlbuilder',
+   'C:\\Users\\L E N O V '
+   'O\\AppData\\Local\\Programs\\Python\\Python310\\lib\\xml\\dom\\xmlbuilder.py',
    'PYMODULE'),
   ('xml.etree',
    'C:\\Users\\L E N O V '
